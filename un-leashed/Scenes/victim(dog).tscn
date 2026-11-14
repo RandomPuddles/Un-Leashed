@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://rg4nwfk661km"]
+
+[ext_resource type="Texture2D" uid="uid://ce0brhjq5bvdq" path="res://Assets/dog placeholder.png" id="1_7i1ya"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k74ha"]
+radius = 33.1
+height = 77.46
+
+[node name="Node2D" type="CharacterBody2D" unique_id=945921495]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=621817925]
+scale = Vector2(0.118, 0.118)
+texture = ExtResource("1_7i1ya")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1465772002]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2109334175]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_k74ha")

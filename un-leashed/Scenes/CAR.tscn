@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bup5p46isbx2u"]
+
+[ext_resource type="Texture2D" uid="uid://drnjsxoi26k8g" path="res://Assets/squirrel_placeholder.png" id="1_8fqqd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qccgy"]
+size = Vector2(256, 171)
+
+[node name="Node2D" type="CharacterBody2D" unique_id=1634031237]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=694702550]
+position = Vector2(0, -18.000046)
+scale = Vector2(0.41, 0.37989512)
+texture = ExtResource("1_8fqqd")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=710314741]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=813422368]
+position = Vector2(7, -13)
+shape = SubResource("RectangleShape2D_qccgy")
