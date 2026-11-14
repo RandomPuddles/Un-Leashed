@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://brxjbel0fpejn"]
 
 [ext_resource type="Texture2D" uid="uid://ce0brhjq5bvdq" path="res://Assets/dog placeholder.png" id="1_nvlu8"]
+[ext_resource type="Script" uid="uid://dmaf18tq86mvo" path="res://Scripts/dog.gd" id="1_uny1q"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uny1q"]
 radius = 17.659063
@@ -21,6 +22,7 @@ gravity_scale = 0.0
 lock_rotation = true
 linear_damp_mode = 1
 linear_damp = 1.515
+script = ExtResource("1_uny1q")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=485582528]
 scale = Vector2(0.11790062, 0.11790062)
@@ -39,6 +41,7 @@ scale = Vector2(1.0543429, 0.57189095)
 shape = SubResource("CircleShape2D_y1yv2")
 
 [node name="LeashAnchor" type="Marker2D" parent="." unique_id=1031097561]
+position = Vector2(8, -2)
 
 [node name="DetectionArea" type="Area2D" parent="." unique_id=1507047442]
 

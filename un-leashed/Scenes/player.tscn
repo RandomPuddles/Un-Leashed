@@ -26,6 +26,7 @@ scale = Vector2(0.063, 0.063)
 texture = ExtResource("2_cvnsp")
 
 [node name="LeashAnchor" type="Marker2D" parent="." unique_id=560291948]
+position = Vector2(0, 24)
 
 [node name="InteractionArea" type="Area2D" parent="." unique_id=1565479767]
 
