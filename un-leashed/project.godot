@@ -15,6 +15,10 @@ run/main_scene="uid://cwe8yf8duqxsa"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 
+[global_group]
+
+Interest="Creatures/Objects the dog runs at"
+
 [input]
 
 up={

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dww64vyks0ygg"]
+
+[ext_resource type="Texture2D" uid="uid://b432m7h26pqc3" path="res://Assets/icon.svg" id="1_lpffs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ym5h5"]
+
+[node name="Node2D" type="Node2D" unique_id=296882698]
+
+[node name="InterestRange" type="Area2D" parent="." unique_id=98204964]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InterestRange" unique_id=278969361 groups=["Interest"]]
+scale = Vector2(0.69130147, 0.69130147)
+shape = SubResource("RectangleShape2D_ym5h5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1528747381]
+scale = Vector2(0.107980646, 0.107980646)
+texture = ExtResource("1_lpffs")
