@@ -13,7 +13,7 @@ func _ready() -> void:
 	randTimeStart()
 	randomDirection()
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	# Continuously apply force in the dog's current direction
 	if linear_velocity.length() < maxSpeed:
 		apply_central_force(direction * walkForce)
