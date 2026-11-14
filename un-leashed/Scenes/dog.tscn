@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://brxjbel0fpejn"]
+
+[node name="Node2D" type="RigidBody2D" unique_id=1030532302]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=353950197]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=459081269]
+
+[node name="LeashAnchor" type="Marker2D" parent="." unique_id=1031097561]
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=1507047442]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=9329727]
+
+[node name="BiteArea" type="Area2D" parent="." unique_id=1041110088]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BiteArea" unique_id=1096646371]
