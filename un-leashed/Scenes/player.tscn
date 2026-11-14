@@ -1,19 +1,27 @@
 [gd_scene format=3 uid="uid://clupon7dui6qi"]
 
 [ext_resource type="Script" uid="uid://ck8lw7odvm6l8" path="res://Scripts/player.gd" id="1_v0iea"]
+[ext_resource type="Texture2D" uid="uid://b5adyw2u1e35o" path="res://Assets/player character.png" id="2_cvnsp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f60y1"]
+radius = 21.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v0iea"]
 radius = 20.0
 
-[node name="Node2D" type="RigidBody2D" unique_id=447015847]
+[node name="Node2D2" type="RigidBody2D" unique_id=447015847]
+gravity_scale = 0.0
+lock_rotation = true
+linear_damp_mode = 1
+linear_damp = 5.65
 script = ExtResource("1_v0iea")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1785335819]
 shape = SubResource("CircleShape2D_f60y1")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1111258043]
+scale = Vector2(0.063, 0.063)
+texture = ExtResource("2_cvnsp")
 
 [node name="LeashAnchor" type="Marker2D" parent="." unique_id=560291948]
 
