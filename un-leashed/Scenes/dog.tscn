@@ -1,17 +1,54 @@
 [gd_scene format=3 uid="uid://brxjbel0fpejn"]
 
-[node name="Node2D" type="RigidBody2D" unique_id=1030532302]
+[ext_resource type="Texture2D" uid="uid://ce0brhjq5bvdq" path="res://Assets/dog placeholder.png" id="1_nvlu8"]
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=353950197]
+[sub_resource type="CircleShape2D" id="CircleShape2D_uny1q"]
+radius = 17.659063
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y1yv2"]
+radius = 20.548769
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nvlu8"]
+radius = 278.01617
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bno1h"]
+radius = 50.0
+
+[node name="Node2D" type="RigidBody2D" unique_id=1030532302]
+collision_layer = 2
+collision_mask = 2
+gravity_scale = 0.0
+lock_rotation = true
+linear_damp_mode = 1
+linear_damp = 1.515
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=485582528]
+scale = Vector2(0.11790062, 0.11790062)
+texture = ExtResource("1_nvlu8")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=195772110]
+position = Vector2(18, -9)
+rotation = 0.49457276
+scale = Vector2(0.85262257, 0.59519553)
+skew = 0.3623935
+shape = SubResource("CircleShape2D_uny1q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=459081269]
+position = Vector2(-6, 6)
+scale = Vector2(1.0543429, 0.57189095)
+shape = SubResource("CircleShape2D_y1yv2")
 
 [node name="LeashAnchor" type="Marker2D" parent="." unique_id=1031097561]
 
 [node name="DetectionArea" type="Area2D" parent="." unique_id=1507047442]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=9329727]
+scale = Vector2(0.7857534, 0.7857534)
+shape = SubResource("CircleShape2D_nvlu8")
 
 [node name="BiteArea" type="Area2D" parent="." unique_id=1041110088]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BiteArea" unique_id=1096646371]
+position = Vector2(3, 0.9999999)
+scale = Vector2(1.0504329, 0.8760216)
+shape = SubResource("CircleShape2D_bno1h")
