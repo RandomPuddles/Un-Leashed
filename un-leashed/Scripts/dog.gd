@@ -2,20 +2,31 @@
 extends RigidBody2D
 
 @export var walkForce: float = 50.0
-@export var runForce: float = 100.0
+@export var runForce: float = 1000.0
 @export var maxSpeed: float = 2000.0
+@onready var detection_area: Area2D = $DetectionArea
+
+var interested: bool = false # true if the dog is running at a thing of interest
+var targetInterest: Node2D # thing of interest dog is running at
 
 var direction: Vector2
 @onready var timer: Timer = $Timer
 
 func _ready() -> void:
+	detection_area.body_entered.connect(onInterest)
+	detection_area.body_exited.connect(onInterestGone)
 	timer.timeout.connect(onTimeout)
 	randTimeStart()
 	randomDirection()
 
 func _physics_process(_delta: float) -> void:
+	# Run at target if interested
+	if interested and linear_velocity.length() < maxSpeed:
+		print("Dog spotted interest")
+		direction = (targetInterest.global_position - global_position).normalized() # get direction towards target
+		apply_central_force(direction * runForce)
 	# Continuously apply force in the dog's current direction
-	if linear_velocity.length() < maxSpeed:
+	if !interested and linear_velocity.length() < maxSpeed:
 		apply_central_force(direction * walkForce)
 
 # Choose a random direction for the dog to wander
@@ -29,4 +40,30 @@ func randTimeStart() -> void:
 # Called when the timer finishes
 func onTimeout() -> void:
 	randomDirection() # Pick a new direction
-	randTimeStart()    # Restart the timer
+	randTimeStart() # Restart the timer
+
+# Called when dog sees thing of interest
+func onInterest(body: Node2D):
+	# Ignore new interest if already targeting something
+	if interested:
+		return
+	if body.is_in_group("Interest"):
+		timer.stop()
+		interested = true
+		targetInterest = body
+
+# Called when interest leaves range. Checks for new interest to run at
+func onInterestGone(argbody: Node2D):
+	# Ignore if the body that left range isn't the target body
+	if argbody != targetInterest:
+		return
+	# Look for new interest in range
+	for nodebody in detection_area.get_overlapping_bodies():
+		if nodebody is Node2D and nodebody.is_in_group("Interest"):
+			onInterest(nodebody) # dog retargets 
+			return
+	# Resume meandering if no interests remain
+	interested = false
+	targetInterest = null
+	randTimeStart()
+	randomDirection()

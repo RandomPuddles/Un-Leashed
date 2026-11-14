@@ -4,7 +4,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ym5h5"]
 
-[node name="Node2D" type="Node2D" unique_id=296882698]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lpffs"]
+
+[node name="Node2D" type="CharacterBody2D" unique_id=598268178 groups=["Interest"]]
 
 [node name="InterestRange" type="Area2D" parent="." unique_id=98204964]
 
@@ -15,3 +17,7 @@ shape = SubResource("RectangleShape2D_ym5h5")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1528747381]
 scale = Vector2(0.107980646, 0.107980646)
 texture = ExtResource("1_lpffs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=780553571]
+scale = Vector2(0.69291306, 0.69291306)
+shape = SubResource("RectangleShape2D_lpffs")
