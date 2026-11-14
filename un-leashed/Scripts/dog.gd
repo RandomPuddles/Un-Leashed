@@ -1,20 +1,32 @@
+
 extends RigidBody2D
 
-@export var acceleration: float = 2000.0
+@export var walkForce: float = 50.0
+@export var runForce: float = 100.0
 @export var maxSpeed: float = 2000.0
-var direction: Vector2
 
-# Called when the node enters the scene tree for the first time.
+var direction: Vector2
+@onready var timer: Timer = $Timer
+
 func _ready() -> void:
+	timer.timeout.connect(onTimeout)
+	randTimeStart()
 	randomDirection()
 
+func _physics_process(delta: float) -> void:
+	# Continuously apply force in the dog's current direction
+	if linear_velocity.length() < maxSpeed:
+		apply_central_force(direction * walkForce)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+# Choose a random direction for the dog to wander
+func randomDirection() -> void:
+	direction = Vector2(randf_range(-1.0, 1.0), randf_range(-1.0, 1.0)).normalized()
 
-# Make it so the dog wanders in a random direction that changes every 2-5 seconds, and runs at anything of interest
+# Start the timer with a random duration between 2 and 5 seconds
+func randTimeStart() -> void:
+	timer.start(randf_range(2.0, 5.0))
 
-
-func randomDirection():
-	direction = Vector2(randf_range(1,10),randf_range(1,10))
+# Called when the timer finishes
+func onTimeout() -> void:
+	randomDirection() # Pick a new direction
+	randTimeStart()    # Restart the timer
