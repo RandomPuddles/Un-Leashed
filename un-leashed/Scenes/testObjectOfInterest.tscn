@@ -11,7 +11,7 @@
 [node name="InterestRange" type="Area2D" parent="." unique_id=98204964]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InterestRange" unique_id=278969361 groups=["Interest"]]
-scale = Vector2(0.69130147, 0.69130147)
+scale = Vector2(0.6875346, 0.6875346)
 shape = SubResource("RectangleShape2D_ym5h5")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1528747381]
@@ -19,5 +19,5 @@ scale = Vector2(0.107980646, 0.107980646)
 texture = ExtResource("1_lpffs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=780553571]
-scale = Vector2(0.69291306, 0.69291306)
+scale = Vector2(1.1090641, 1.1090641)
 shape = SubResource("RectangleShape2D_lpffs")
