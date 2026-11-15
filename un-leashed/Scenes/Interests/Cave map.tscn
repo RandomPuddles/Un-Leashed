@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://c11evomcvceit"]
+
+[ext_resource type="PackedScene" uid="uid://dqu1laf1mxgxr" path="res://Scenes/Stage 4 - Goon Lair.tscn" id="1_8rt2v"]
+[ext_resource type="PackedScene" uid="uid://vwnd01wmfw3d" path="res://Scenes/Interests/bigrock.tscn" id="2_savrg"]
+[ext_resource type="PackedScene" uid="uid://dvdg6i07eaeey" path="res://Scenes/Interests/lamppost.tscn" id="3_6fgbm"]
+
+[node name="Node2D" unique_id=884539179 instance=ExtResource("1_8rt2v")]
+
+[node name="Node2D" parent="." index="2" unique_id=416441256 instance=ExtResource("2_savrg")]
+position = Vector2(1646, -156)
+
+[node name="Node2D2" parent="." index="3" unique_id=1447973468 instance=ExtResource("2_savrg")]
+position = Vector2(1533, -1299)
+
+[node name="Node2D3" parent="." index="4" unique_id=5774519 instance=ExtResource("2_savrg")]
+position = Vector2(-1699, -137)
+
+[node name="Node2D4" parent="." index="5" unique_id=1244498164 instance=ExtResource("2_savrg")]
+position = Vector2(-1588, -1297)
+
+[node name="Node2D5" parent="." index="6" unique_id=1964287018 instance=ExtResource("2_savrg")]
+position = Vector2(688, -2017)
+
+[node name="Node2D6" parent="." index="7" unique_id=1519962795 instance=ExtResource("2_savrg")]
+position = Vector2(-552, -2002)
+
+[node name="Node2D7" parent="." index="8" unique_id=887525372 instance=ExtResource("3_6fgbm")]
+position = Vector2(-1640, -2001)
+
+[node name="Node2D8" parent="." index="9" unique_id=1858492106 instance=ExtResource("3_6fgbm")]
+position = Vector2(1749, -2045)
+
+[node name="Node2D9" parent="." index="10" unique_id=462810183 instance=ExtResource("3_6fgbm")]
+position = Vector2(-1729, 1763)
+
+[node name="Node2D10" parent="." index="11" unique_id=2081753960 instance=ExtResource("3_6fgbm")]
+position = Vector2(1779, 1852)
+
+[node name="Node2D11" parent="." index="12" unique_id=1987176719 instance=ExtResource("2_savrg")]
+position = Vector2(-1532, 954)
+
+[node name="Node2D12" parent="." index="13" unique_id=76744890 instance=ExtResource("2_savrg")]
+position = Vector2(-560, 1635)
+
+[node name="Node2D13" parent="." index="14" unique_id=1587675953 instance=ExtResource("2_savrg")]
+position = Vector2(521, 1610)
+
+[node name="Node2D14" parent="." index="15" unique_id=334019318 instance=ExtResource("2_savrg")]
+position = Vector2(1473, 984)

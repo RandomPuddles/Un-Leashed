@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://x53r6anysusk" path="res://Scenes/Interests/tilemaptest.tscn" id="1_k8qd8"]
 [ext_resource type="PackedScene" uid="uid://d33ivxpj5jetf" path="res://Scenes/Interests/tree.tscn" id="2_p5yvi"]
-[ext_resource type="PackedScene" uid="uid://cpljps8je428n" path="res://Scenes/Interests/bench.tscn" id="3_c16rv"]
+[ext_resource type="PackedScene" uid="uid://nrmj1aohdo5k" path="res://Scenes/Interests/bench.tscn" id="3_c16rv"]
 [ext_resource type="PackedScene" uid="uid://vwnd01wmfw3d" path="res://Scenes/Interests/bigrock.tscn" id="4_ioryh"]
 
 [node name="Node2D" unique_id=591246412 instance=ExtResource("1_k8qd8")]
