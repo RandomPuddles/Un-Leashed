@@ -1,19 +1,29 @@
 [gd_scene format=3 uid="uid://rg4nwfk661km"]
 
-[ext_resource type="Texture2D" uid="uid://ce0brhjq5bvdq" path="res://Assets/dog placeholder.png" id="1_7i1ya"]
+[ext_resource type="Texture2D" uid="uid://ce0brhjq5bvdq" path="res://Assets/dog placeholder.png" id="1_6rul6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k74ha"]
-radius = 33.1
-height = 77.46
+radius = 22.0
+height = 66.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qccgy"]
+radius = 34.0
+height = 80.0
 
 [node name="Node2D" type="CharacterBody2D" unique_id=945921495]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=621817925]
 scale = Vector2(0.118, 0.118)
-texture = ExtResource("1_7i1ya")
+texture = ExtResource("1_6rul6")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1465772002]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2109334175]
+position = Vector2(3, 1)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_k74ha")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=428502618]
+position = Vector2(-3, 0)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_qccgy")

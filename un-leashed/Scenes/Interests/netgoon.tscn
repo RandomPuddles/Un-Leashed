@@ -9,6 +9,10 @@ height = 122.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_k74ha"]
 radius = 387.02066
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qccgy"]
+radius = 30.0
+height = 140.0
+
 [node name="Node2D" type="CharacterBody2D" unique_id=1428251830]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=27291191]
@@ -19,9 +23,13 @@ texture = ExtResource("1_lb5go")
 [node name="Area2D" type="Area2D" parent="." unique_id=1589249969]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=552706925]
+scale = Vector2(0.87, 0.87)
 shape = SubResource("CapsuleShape2D_14xel")
 
 [node name="DetectionArea" type="Area2D" parent="." unique_id=1146192975]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1623046581]
 shape = SubResource("CircleShape2D_k74ha")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1450871434]
+shape = SubResource("CapsuleShape2D_qccgy")

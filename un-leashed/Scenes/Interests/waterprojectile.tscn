@@ -1,17 +1,35 @@
 [gd_scene format=3 uid="uid://m58s3ip1fhww"]
 
-[ext_resource type="Texture2D" uid="uid://b5adyw2u1e35o" path="res://Assets/player character.png" id="1_tsgfp"]
+[ext_resource type="Texture2D" uid="uid://pj5kq77w5dd3" path="res://Assets/water bullet/moving/water bullet_0000.png" id="1_o3kas"]
+[ext_resource type="Texture2D" uid="uid://c3lxejnjn16go" path="res://Assets/water bullet/moving/water bullet_0001.png" id="2_qptr7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qccgy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_o3kas")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qptr7")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qccgy"]
 height = 22.0
 
 [node name="Node2D" type="Area2D" unique_id=57320570]
 
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1013491673]
+position = Vector2(-1.1920929e-07, 0)
+rotation = 1.5707964
+scale = Vector2(0.046, 0.051)
+sprite_frames = SubResource("SpriteFrames_qccgy")
+frame_progress = 0.6724776
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1321206550]
 rotation = 1.5707964
+scale = Vector2(1.655, 1.655)
 shape = SubResource("CapsuleShape2D_qccgy")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=641173315]
-position = Vector2(-1.1920929e-07, 0)
-scale = Vector2(0.02607362, 0.027607363)
-texture = ExtResource("1_tsgfp")

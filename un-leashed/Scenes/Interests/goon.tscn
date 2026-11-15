@@ -9,19 +9,27 @@ height = 128.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_qccgy"]
 radius = 384.81293
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_llthp"]
+radius = 30.0
+height = 148.0
+
 [node name="Node2D" type="CharacterBody2D" unique_id=1708683242]
-
-[node name="Area2D" type="Area2D" parent="." unique_id=1835432412]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1671046140]
-shape = SubResource("CapsuleShape2D_qccgy")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=931491702]
 rotation = 1.5707964
 scale = Vector2(0.208, 0.12)
 texture = ExtResource("1_qlftw")
 
+[node name="Area2D" type="Area2D" parent="." unique_id=1835432412]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1671046140]
+scale = Vector2(0.825, 0.825)
+shape = SubResource("CapsuleShape2D_qccgy")
+
 [node name="DetectionArea" type="Area2D" parent="." unique_id=504332664]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1664487209]
 shape = SubResource("CircleShape2D_qccgy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=161225169]
+shape = SubResource("CapsuleShape2D_llthp")

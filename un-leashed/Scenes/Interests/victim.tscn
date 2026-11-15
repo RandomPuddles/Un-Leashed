@@ -3,8 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://drnjsxoi26k8g" path="res://Assets/squirrel_placeholder.png" id="1_0nfhs"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qccgy"]
-radius = 25.0
-height = 142.0
+radius = 22.05
+height = 119.3
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_llthp"]
+radius = 33.0
+height = 166.0
 
 [node name="Node2D" type="CharacterBody2D" unique_id=1252317186]
 
@@ -17,3 +21,6 @@ texture = ExtResource("1_0nfhs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=45053017]
 shape = SubResource("CapsuleShape2D_qccgy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1075374151]
+shape = SubResource("CapsuleShape2D_llthp")

@@ -5,6 +5,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qccgy"]
 size = Vector2(12, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_llthp"]
+size = Vector2(20, 34)
+
 [node name="Node2D" type="StaticBody2D" unique_id=1682893070]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1330302417]
@@ -14,4 +17,8 @@ texture = ExtResource("1_cffp3")
 [node name="Area2D" type="Area2D" parent="." unique_id=2053505867]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2039920933]
+scale = Vector2(1.375, 1.375)
 shape = SubResource("RectangleShape2D_qccgy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=151700896]
+shape = SubResource("RectangleShape2D_llthp")
