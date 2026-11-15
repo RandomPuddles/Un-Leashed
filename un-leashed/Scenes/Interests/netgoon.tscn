@@ -1,35 +1,37 @@
 [gd_scene format=3 uid="uid://cq0mpt713y85u"]
 
-[ext_resource type="Texture2D" uid="uid://drnjsxoi26k8g" path="res://Assets/squirrel_placeholder.png" id="1_lb5go"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_14xel"]
-radius = 23.0
-height = 122.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_k74ha"]
-radius = 387.02066
+[ext_resource type="Texture2D" uid="uid://cc3c6ed70ayie" path="res://Assets/person PLACEHOLDER PLACEHOLDER PLACEHOLDER.png" id="1_lb5go"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qccgy"]
-radius = 30.0
-height = 140.0
+radius = 27.848103
+height = 97.89029
 
-[node name="Node2D" type="CharacterBody2D" unique_id=1428251830]
+[sub_resource type="CircleShape2D" id="CircleShape2D_qccgy"]
+radius = 382.04712
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=27291191]
-rotation = 1.5707964
-scale = Vector2(0.208, 0.12)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_llthp"]
+radius = 28.0
+height = 90.0
+
+[node name="Node2D" type="CharacterBody2D" unique_id=1274564747]
+
+[node name="PersonPlaceholderPlaceholderPlaceholder" type="Sprite2D" parent="." unique_id=1355874181]
+scale = Vector2(0.157, 0.157)
 texture = ExtResource("1_lb5go")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1589249969]
+[node name="Area2D" type="Area2D" parent="." unique_id=1640849943]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=552706925]
-scale = Vector2(0.87, 0.87)
-shape = SubResource("CapsuleShape2D_14xel")
-
-[node name="DetectionArea" type="Area2D" parent="." unique_id=1146192975]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1623046581]
-shape = SubResource("CircleShape2D_k74ha")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1450871434]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=452938984]
+position = Vector2(-2, 5.0000005)
+scale = Vector2(1.185, 1.185)
 shape = SubResource("CapsuleShape2D_qccgy")
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=8540340]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=61342501]
+position = Vector2(-3, 0)
+shape = SubResource("CircleShape2D_qccgy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1610654809]
+position = Vector2(-3, 2)
+shape = SubResource("CapsuleShape2D_llthp")
