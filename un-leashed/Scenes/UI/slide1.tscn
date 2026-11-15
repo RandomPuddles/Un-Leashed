@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c2wqfid20uaa1"]
+
+[ext_resource type="Script" uid="uid://bvi0jycx6efb3" path="res://Scripts/slide1Next.gd" id="1_1n5he"]
+
+[node name="Node2D" type="Control" unique_id=1980642493]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Slide1" type="Sprite2D" parent="." unique_id=1335431598]
+
+[node name="Button" type="Button" parent="." unique_id=80819200]
+layout_mode = 0
+offset_left = 1065.0
+offset_top = 596.0
+offset_right = 1129.0
+offset_bottom = 627.0
+text = "Next ->"
+script = ExtResource("1_1n5he")
+
+[node name="Label" type="Label" parent="." unique_id=1266277471]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Slide 1"

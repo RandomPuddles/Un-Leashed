@@ -1,9 +1,10 @@
-[gd_scene format=3 uid="uid://b8mhmgmu5dsd8"]
+[gd_scene format=3 uid="uid://1ryryhr7q432"]
 
 [ext_resource type="Script" uid="uid://bahcyb7sf8ty6" path="res://Scripts/stage1Button.gd" id="1_5pknu"]
 [ext_resource type="Script" uid="uid://pcp8cb5a07sc" path="res://Scripts/itemShopButton.gd" id="2_b7htb"]
+[ext_resource type="Script" uid="uid://bajq2iawinhdx" path="res://Scripts/startButton.gd" id="3_8be4d"]
 
-[node name="Node2D" type="Control" unique_id=1039132230]
+[node name="Node2D2" type="Control" unique_id=1039132230]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,17 +23,26 @@ text = "Main Menu"
 [node name="Button" type="Button" parent="." unique_id=1936894807]
 layout_mode = 0
 offset_left = 553.0
-offset_top = 215.0
+offset_top = 297.0
 offset_right = 617.0
-offset_bottom = 246.0
+offset_bottom = 328.0
 text = "Stage 1"
 script = ExtResource("1_5pknu")
 
 [node name="Button2" type="Button" parent="." unique_id=1229523286]
 layout_mode = 0
 offset_left = 545.0
-offset_top = 346.0
+offset_top = 389.0
 offset_right = 632.0
-offset_bottom = 377.0
+offset_bottom = 420.0
 text = "Item Shop"
 script = ExtResource("2_b7htb")
+
+[node name="StartButton" type="Button" parent="." unique_id=1129821081]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 196.0
+offset_right = 606.0
+offset_bottom = 227.0
+text = "Start"
+script = ExtResource("3_8be4d")

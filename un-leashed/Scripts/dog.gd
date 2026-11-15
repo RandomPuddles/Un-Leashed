@@ -35,10 +35,8 @@ func _ready() -> void:
 func onBiteStart(body: Node2D):
 	if not body.is_in_group("Interest"):
 		return
-	
 	if not is_instance_valid(body):
 		return
-	
 	biteTarget = body
 	biteTimer.start(biteStartup)
 

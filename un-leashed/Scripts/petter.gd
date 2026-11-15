@@ -40,7 +40,8 @@ func randomDirection() -> void:
 
 # Start the timer with a random duration between 2 and 5 seconds
 func randTimeStart() -> void:
-	timer.start(randf_range(2.0, 5.0))
+	if not is_queued_for_deletion():
+		timer.start(randf_range(2.0, 5.0))
 
 # Called when the timer finishes
 func onTimeout() -> void:
