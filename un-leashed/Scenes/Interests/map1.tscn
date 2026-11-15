@@ -7,6 +7,10 @@
 
 [node name="Node2D" unique_id=591246412 instance=ExtResource("1_k8qd8")]
 
+[node name="StaticBody2D" parent="." index="1" unique_id=1970571802]
+collision_layer = 3
+collision_mask = 3
+
 [node name="Node2D" parent="." index="2" unique_id=1296134068 instance=ExtResource("2_p5yvi")]
 position = Vector2(1994, -315)
 
@@ -152,10 +156,10 @@ position = Vector2(1403, -1457)
 position = Vector2(1122, -962)
 
 [node name="Node2D49" parent="." index="50" unique_id=963749356 instance=ExtResource("2_p5yvi")]
-position = Vector2(-1450, -657)
+position = Vector2(-1366, -735)
 
 [node name="Node2D50" parent="." index="51" unique_id=611431538 instance=ExtResource("2_p5yvi")]
-position = Vector2(-1391, -1129)
+position = Vector2(-1391, -1271)
 
 [node name="Node2D51" parent="." index="52" unique_id=985778796 instance=ExtResource("2_p5yvi")]
 position = Vector2(1965, -3111)
@@ -215,10 +219,40 @@ position = Vector2(-1421, 70)
 position = Vector2(1038, 130)
 
 [node name="Node2D70" parent="." index="71" unique_id=1608446832 instance=ExtResource("2_p5yvi")]
-position = Vector2(-1188, -283)
+position = Vector2(-1027, -425)
 
 [node name="Node2D71" parent="." index="72" unique_id=1688880508 instance=ExtResource("2_p5yvi")]
 position = Vector2(1623, 27)
 
 [node name="Node2D72" parent="." index="73" unique_id=1293735094 instance=ExtResource("2_p5yvi")]
 position = Vector2(-591, -1927)
+
+[node name="Node2D73" parent="." index="74" unique_id=213872611 instance=ExtResource("2_p5yvi")]
+position = Vector2(-887, 207)
+
+[node name="Node2D74" parent="." index="75" unique_id=1806197205 instance=ExtResource("2_p5yvi")]
+position = Vector2(-606, -107)
+
+[node name="Node2D75" parent="." index="76" unique_id=1379414489 instance=ExtResource("2_p5yvi")]
+position = Vector2(-617, -698)
+
+[node name="Node2D76" parent="." index="77" unique_id=993236559 instance=ExtResource("2_p5yvi")]
+position = Vector2(732, -532)
+
+[node name="Node2D77" parent="." index="78" unique_id=1713034823 instance=ExtResource("2_p5yvi")]
+position = Vector2(339, -290)
+
+[node name="Node2D78" parent="." index="79" unique_id=1740367624 instance=ExtResource("2_p5yvi")]
+position = Vector2(489, 160)
+
+[node name="Node2D79" parent="." index="80" unique_id=1580223637 instance=ExtResource("2_p5yvi")]
+position = Vector2(636, -984)
+
+[node name="Node2D80" parent="." index="81" unique_id=595177295 instance=ExtResource("2_p5yvi")]
+position = Vector2(-889, -1227)
+
+[node name="Node2D81" parent="." index="82" unique_id=617445950 instance=ExtResource("2_p5yvi")]
+position = Vector2(-1812, -3690)
+
+[node name="Node2D82" parent="." index="83" unique_id=598845449 instance=ExtResource("2_p5yvi")]
+position = Vector2(1702, -3419)

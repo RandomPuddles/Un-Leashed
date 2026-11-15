@@ -2,11 +2,21 @@
 
 [ext_resource type="PackedScene" uid="uid://clupon7dui6qi" path="res://Scenes/player.tscn" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://brxjbel0fpejn" path="res://Scenes/dog.tscn" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://dww64vyks0ygg" path="res://Scenes/testObjectOfInterest.tscn" id="3_8gbba"]
+[ext_resource type="PackedScene" uid="uid://cc8vmip1lqpv8" path="res://Scenes/leash.tscn" id="4_jjvhh"]
 
 [node name="Node2D2" type="Node2D" unique_id=91032526]
 
-[node name="Node2D2" parent="." unique_id=447015847 instance=ExtResource("1_jjgbg")]
+[node name="Player" parent="." unique_id=447015847 instance=ExtResource("1_jjgbg")]
 position = Vector2(513, 362)
 
-[node name="Node2D" parent="." unique_id=1030532302 instance=ExtResource("2_bo1nx")]
-position = Vector2(634, 372)
+[node name="Dog" parent="." unique_id=1030532302 instance=ExtResource("2_bo1nx")]
+position = Vector2(669, 366)
+scale = Vector2(1, 1.0184364)
+
+[node name="Interest" parent="." unique_id=296882698 instance=ExtResource("3_8gbba")]
+position = Vector2(918, 367)
+
+[node name="Leash" parent="." unique_id=545569987 node_paths=PackedStringArray("player", "dog") instance=ExtResource("4_jjvhh")]
+player = NodePath("../Player")
+dog = NodePath("../Dog")

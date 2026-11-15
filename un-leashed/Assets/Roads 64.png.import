@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://h37o14n4u7ks"
-path="res://.godot/imported/pixil-frame-0.png-1e2e14a6fca0ab207413f8785ae4b7df.ctex"
+uid="uid://cd3xilfpylhel"
+path="res://.godot/imported/Roads 64.png-884ec97ebb133cc14f2dd990e919f132.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/pixil-frame-0.png"
-dest_files=["res://.godot/imported/pixil-frame-0.png-1e2e14a6fca0ab207413f8785ae4b7df.ctex"]
+source_file="res://Assets/Roads 64.png"
+dest_files=["res://.godot/imported/Roads 64.png-884ec97ebb133cc14f2dd990e919f132.ctex"]
 
 [params]
 

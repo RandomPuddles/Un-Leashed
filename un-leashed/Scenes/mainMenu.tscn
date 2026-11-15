@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://b8mhmgmu5dsd8"]
+
+[ext_resource type="Script" uid="uid://bahcyb7sf8ty6" path="res://Scripts/stage1Button.gd" id="1_5pknu"]
+[ext_resource type="Script" uid="uid://pcp8cb5a07sc" path="res://Scripts/itemShopButton.gd" id="2_b7htb"]
+
+[node name="Node2D" type="Control" unique_id=1039132230]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=1497254895]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 99.0
+offset_right = 628.0
+offset_bottom = 122.0
+text = "Main Menu"
+
+[node name="Button" type="Button" parent="." unique_id=1936894807]
+layout_mode = 0
+offset_left = 553.0
+offset_top = 215.0
+offset_right = 617.0
+offset_bottom = 246.0
+text = "Stage 1"
+script = ExtResource("1_5pknu")
+
+[node name="Button2" type="Button" parent="." unique_id=1229523286]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 346.0
+offset_right = 632.0
+offset_bottom = 377.0
+text = "Item Shop"
+script = ExtResource("2_b7htb")

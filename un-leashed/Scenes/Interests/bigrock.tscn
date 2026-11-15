@@ -7,6 +7,8 @@ radius = 122.0
 height = 456.0
 
 [node name="Node2D" type="StaticBody2D" unique_id=416441256]
+collision_layer = 3
+collision_mask = 3
 
 [node name="BigRock" type="Sprite2D" parent="." unique_id=416843027]
 z_index = 3
