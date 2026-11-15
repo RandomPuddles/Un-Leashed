@@ -5,6 +5,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qccgy"]
 size = Vector2(38, 59.875)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_llthp"]
+size = Vector2(41, 25)
+
 [node name="Node2D" type="StaticBody2D" unique_id=1684432424]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1674685138]
@@ -17,3 +20,7 @@ texture = ExtResource("1_qds07")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=883620125]
 position = Vector2(0, 0.0625)
 shape = SubResource("RectangleShape2D_qccgy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2127465428]
+position = Vector2(0, 19.5)
+shape = SubResource("RectangleShape2D_llthp")
