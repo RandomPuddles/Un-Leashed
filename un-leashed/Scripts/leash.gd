@@ -9,6 +9,7 @@ var currentLengthVector: Vector2
 var currentLength: float
 @export var stiffness: float = 20
 @export var durability: float = 100.0
+@export var maxDurability: float = 100.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,6 +22,9 @@ func _physics_process(_delta: float) -> void:
 	
 	if get_node_or_null("Line2D") == null: # End leash logic if leash is broken
 		return
+	
+	# Color the leash based on current durability
+	updateLeashColor()
 	
 	currentLengthVector = dog.global_position - player.global_position # get vector from player to dog
 	currentLength = currentLengthVector.length() # get float dist between player and dog
@@ -42,10 +46,13 @@ func _physics_process(_delta: float) -> void:
 	else:
 		# Gain durability while not stretched
 		durability = durability + 0.1
-		if durability > 100:
-			durability = 100
-		print(durability)
+		if durability > maxDurability:
+			durability = maxDurability
 	
 	# Break leash if durability is <= 0
 	if durability <= 0:
 		line.queue_free()
+
+func updateLeashColor():
+	var damagePercent = 1.0 - (durability / maxDurability)
+	line.default_color = Color.WHITE.lerp(Color.RED, damagePercent)
