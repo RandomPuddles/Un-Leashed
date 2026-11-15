@@ -3,7 +3,11 @@ extends RigidBody2D
 
 @onready var detection_area: Area2D = $DetectionArea
 @onready var leash_anchor: Marker2D = $LeashAnchor
+@onready var biteArea: Area2D = $BiteArea
+@onready var biteTimer: Timer = $BiteTimer
+var biteTarget: Node2D
 
+@export var biteStartup: float = 1.0
 @export var walkForce: float = 50.0
 @export var runForce: float = 1000.0
 @export var maxSpeed: float = 2000.0
@@ -18,9 +22,36 @@ var direction: Vector2
 func _ready() -> void:
 	detection_area.body_entered.connect(onInterest)
 	detection_area.body_exited.connect(onInterestGone)
+	biteArea.body_entered.connect(onBiteStart) # Called when interest enters dog's bite range
+	biteArea.body_exited.connect(onPossibleBiteTargetExit)
+	biteTimer.timeout.connect(onBiteTime)
 	timer.timeout.connect(onTimeout)
 	randTimeStart()
 	randomDirection()
+	biteTimer.autostart = false
+	biteTimer.one_shot = true
+
+# Called when interest enters dog's bite range
+func onBiteStart(body: Node2D):
+	if body.is_in_group("Interest"):
+		biteTarget = body
+		biteTimer.start(1)
+
+# Called when it's time for dog to eat interest
+func onBiteTime():
+	biteTarget.queue_free()
+	biteTarget = null
+	targetInterest = null
+	interested = false
+	fear = false
+
+func onPossibleBiteTargetExit(body: Node2D):
+	if body == biteTarget:
+		biteTarget = null
+		targetInterest = null
+		interested = false
+		fear = false
+		biteTimer.stop() # Stops timer before interest is eaten
 
 func _physics_process(_delta: float) -> void:
 	# Run at target if interested
