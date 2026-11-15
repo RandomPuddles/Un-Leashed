@@ -1,19 +1,27 @@
 [gd_scene format=3 uid="uid://did5jduk4dkcq"]
 
-[ext_resource type="Texture2D" uid="uid://drnjsxoi26k8g" path="res://Assets/squirrel_placeholder.png" id="1_5sjwt"]
+[ext_resource type="Texture2D" uid="uid://drnjsxoi26k8g" path="res://Assets/squirrel_placeholder.png" id="1_iv3gi"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qccgy"]
 radius = 24.0
 height = 122.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qccgy"]
+radius = 360.02222
 
 [node name="Node2D" type="CharacterBody2D" unique_id=1799454016]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1649314863]
 rotation = 1.5707964
 scale = Vector2(0.208, 0.12)
-texture = ExtResource("1_5sjwt")
+texture = ExtResource("1_iv3gi")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1925843498]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1801401766]
 shape = SubResource("CapsuleShape2D_qccgy")
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=2141600235]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=232291649]
+shape = SubResource("CircleShape2D_qccgy")

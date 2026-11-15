@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dj2j6hjvecc1o"]
 
-[ext_resource type="Texture2D" uid="uid://drnjsxoi26k8g" path="res://Assets/squirrel_placeholder.png" id="1_yiwyu"]
+[ext_resource type="Texture2D" uid="uid://drnjsxoi26k8g" path="res://Assets/squirrel_placeholder.png" id="1_0nfhs"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qccgy"]
 radius = 25.0
@@ -8,12 +8,12 @@ height = 142.0
 
 [node name="Node2D" type="CharacterBody2D" unique_id=1252317186]
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=169643697]
+rotation = 1.5707964
+scale = Vector2(0.2080765, 0.119682625)
+texture = ExtResource("1_0nfhs")
+
 [node name="Area2D" type="Area2D" parent="." unique_id=887786949]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=45053017]
 shape = SubResource("CapsuleShape2D_qccgy")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=169643697]
-rotation = 1.5707964
-scale = Vector2(0.2080765, 0.119682625)
-texture = ExtResource("1_yiwyu")
