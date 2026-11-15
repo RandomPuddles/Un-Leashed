@@ -1,20 +1,19 @@
 [gd_scene format=3 uid="uid://xcrkrw6usmyl"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_llthp"]
-radius = 28.071337
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_qccgy"]
-radius = 28.071337
+[ext_resource type="Texture2D" uid="uid://bpogvtfaohr4f" path="res://Assets/nails.png" id="1_qnkob"]
 
 [node name="Node2D" type="StaticBody2D" unique_id=1774326370]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=195596359]
+position = Vector2(-2.2737368e-13, 0)
+scale = Vector2(0.09318187, 0.093181856)
+texture = ExtResource("1_qnkob")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=687668684]
 scale = Vector2(0.735, 0.735)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1015210545]
-shape = SubResource("CircleShape2D_llthp")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1376704261]
+polygon = PackedVector2Array(-23.12925, 23.12925, -8.163264, -17.687073, 0, -21.768705, 28.571426, -20.408161, 24.489794, -10.884353, 17.687073, -2.7210882, 13.605441, 19.047617, 2.7210882, 24.489794)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=850440395]
-shape = SubResource("CircleShape2D_qccgy")
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=2014942903]
+polygon = PackedVector2Array(-3, -20, -8, -16, -20, 20, 6, 20, 12, 17, 17, 0, 22, -10, 25, -16)
