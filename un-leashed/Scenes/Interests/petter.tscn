@@ -1,19 +1,21 @@
 [gd_scene format=3 uid="uid://did5jduk4dkcq"]
 
 [ext_resource type="Texture2D" uid="uid://drnjsxoi26k8g" path="res://Assets/squirrel_placeholder.png" id="1_iv3gi"]
+[ext_resource type="Script" uid="uid://bshvxkknrtk7k" path="res://Scripts/petter.gd" id="1_wnsyb"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qccgy"]
 radius = 24.0
 height = 122.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qccgy"]
-radius = 360.02222
+radius = 757.44635
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_llthp"]
 radius = 31.0
 height = 142.0
 
-[node name="Node2D" type="CharacterBody2D" unique_id=1799454016]
+[node name="Node2D" type="RigidBody2D" unique_id=1814147571 groups=["Interest"]]
+script = ExtResource("1_wnsyb")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1649314863]
 rotation = 1.5707964
@@ -33,3 +35,5 @@ shape = SubResource("CircleShape2D_qccgy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=497278189]
 shape = SubResource("CapsuleShape2D_llthp")
+
+[node name="Timer" type="Timer" parent="." unique_id=1453906286]
