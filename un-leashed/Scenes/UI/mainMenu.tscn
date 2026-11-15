@@ -46,3 +46,17 @@ offset_right = 606.0
 offset_bottom = 227.0
 text = "Start"
 script = ExtResource("3_8be4d")
+
+[node name="Label2" type="Label" parent="." unique_id=51257402]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 85.0
+offset_right = 297.0
+offset_bottom = 238.0
+text = "WASD to move
+Click and swipe mouse to yank dog
+Lshift to Dash
+Dont let the leash break
+BEWARE of GOONS
+The more the dog eats the more enemies"
+horizontal_alignment = 1
