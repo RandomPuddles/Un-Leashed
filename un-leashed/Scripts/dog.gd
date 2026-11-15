@@ -10,6 +10,7 @@ extends RigidBody2D
 
 var interested: bool = false # true if the dog is running at a thing of interest
 var targetInterest: Node2D # thing of interest dog is running at
+var fear: bool = false
 
 var direction: Vector2
 @onready var timer: Timer = $Timer
@@ -23,7 +24,10 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	# Run at target if interested
-	if interested and linear_velocity.length() < maxSpeed:
+	if interested and fear:
+		direction = -(targetInterest.global_position - global_position).normalized() # get direction towards target
+		apply_central_force(direction * runForce)
+	elif interested and linear_velocity.length() < maxSpeed:
 		direction = (targetInterest.global_position - global_position).normalized() # get direction towards target
 		apply_central_force(direction * runForce)
 	# Continuously apply force in the dog's current direction
@@ -43,7 +47,7 @@ func onTimeout() -> void:
 	randomDirection() # Pick a new direction
 	randTimeStart() # Restart the timer
 
-# Called when dog sees thing of interest
+# Called when dog sees thing of interest or uninterest (goon)
 func onInterest(body: Node2D):
 	# Ignore new interest if already targeting something
 	if interested:
@@ -51,6 +55,12 @@ func onInterest(body: Node2D):
 	if body.is_in_group("Interest"):
 		timer.stop()
 		interested = true
+		fear = false
+		targetInterest = body
+	if body.is_in_group("Uninterest"):
+		timer.stop()
+		interested = true
+		fear = true
 		targetInterest = body
 
 # Called when interest leaves range. Checks for new interest to run at
@@ -60,11 +70,12 @@ func onInterestGone(argbody: Node2D):
 		return
 	# Look for new interest in range
 	for nodebody in detection_area.get_overlapping_bodies():
-		if nodebody is Node2D and nodebody.is_in_group("Interest"):
+		if nodebody is Node2D and (nodebody.is_in_group("Interest") or nodebody.is_in_group("Uninterest")):
 			onInterest(nodebody) # dog retargets 
 			return
 	# Resume meandering if no interests remain
 	interested = false
+	fear = false
 	targetInterest = null
 	randTimeStart()
 	randomDirection()

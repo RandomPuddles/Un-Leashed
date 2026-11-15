@@ -15,6 +15,8 @@ radius = 31.0
 height = 142.0
 
 [node name="Node2D" type="RigidBody2D" unique_id=1814147571 groups=["Interest"]]
+gravity_scale = 0.0
+lock_rotation = true
 script = ExtResource("1_wnsyb")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1649314863]

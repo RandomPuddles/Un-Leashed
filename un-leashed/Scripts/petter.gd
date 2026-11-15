@@ -3,7 +3,7 @@ extends RigidBody2D
 @onready var detection_area: Area2D = $DetectionArea
 
 @export var walkForce: float = 50.0
-@export var runForce: float = 1000.0
+@export var runForce: float = 200.0
 @export var maxSpeed: float = 2000.0
 
 var interested: bool = false # true if the dog is running at a thing of interest

@@ -19,6 +19,7 @@ config/icon="res://Assets/icon.svg"
 
 Interest="Creatures/Objects the dog runs at"
 Dog="The dog :D"
+Uninterest="Dog is scared of goon"
 
 [input]
 

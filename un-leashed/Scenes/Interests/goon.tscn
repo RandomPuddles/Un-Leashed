@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://ck3ynxt5eu60y"]
 
+[ext_resource type="Script" uid="uid://8f2iva3ka6hk" path="res://Scripts/goon.gd" id="1_l5pio"]
 [ext_resource type="Texture2D" uid="uid://cc3c6ed70ayie" path="res://Assets/person PLACEHOLDER PLACEHOLDER PLACEHOLDER.png" id="1_qlftw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qccgy"]
@@ -7,13 +8,17 @@ radius = 27.848103
 height = 97.89029
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qccgy"]
-radius = 382.04712
+radius = 501.004
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_llthp"]
 radius = 28.0
 height = 90.0
 
-[node name="Node2D" type="CharacterBody2D" unique_id=1274564747]
+[node name="Node2D" type="RigidBody2D" unique_id=2132922377 groups=["Uninterest"]]
+gravity_scale = 0.0
+lock_rotation = true
+linear_damp = 1.5
+script = ExtResource("1_l5pio")
 
 [node name="PersonPlaceholderPlaceholderPlaceholder" type="Sprite2D" parent="." unique_id=1355874181]
 scale = Vector2(0.157, 0.157)
@@ -35,3 +40,5 @@ shape = SubResource("CircleShape2D_qccgy")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1610654809]
 position = Vector2(-3, 2)
 shape = SubResource("CapsuleShape2D_llthp")
+
+[node name="Timer" type="Timer" parent="." unique_id=228458977]
