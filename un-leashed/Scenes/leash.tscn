@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://cc8vmip1lqpv8"]
 
+[ext_resource type="Script" uid="uid://dgwisyd78a0fs" path="res://Scripts/leash.gd" id="1_vsfri"]
+
 [node name="Node2D" type="Node2D" unique_id=545569987]
+script = ExtResource("1_vsfri")
 
 [node name="Line2D" type="Line2D" parent="." unique_id=2010230146]
 

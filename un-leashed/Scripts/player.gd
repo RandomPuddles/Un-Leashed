@@ -1,4 +1,7 @@
+class_name Player
 extends RigidBody2D
+
+@onready var leash_anchor: Marker2D = $LeashAnchor
 
 @export var acceleration: float = 2000.0
 @export var maxSpeed: float = 2000.0

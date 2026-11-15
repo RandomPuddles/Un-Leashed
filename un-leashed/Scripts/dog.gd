@@ -1,10 +1,12 @@
-
+class_name Dog
 extends RigidBody2D
+
+@onready var detection_area: Area2D = $DetectionArea
+@onready var leash_anchor: Marker2D = $LeashAnchor
 
 @export var walkForce: float = 50.0
 @export var runForce: float = 1000.0
 @export var maxSpeed: float = 2000.0
-@onready var detection_area: Area2D = $DetectionArea
 
 var interested: bool = false # true if the dog is running at a thing of interest
 var targetInterest: Node2D # thing of interest dog is running at
@@ -22,7 +24,6 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	# Run at target if interested
 	if interested and linear_velocity.length() < maxSpeed:
-		print("Dog spotted interest")
 		direction = (targetInterest.global_position - global_position).normalized() # get direction towards target
 		apply_central_force(direction * runForce)
 	# Continuously apply force in the dog's current direction
@@ -67,3 +68,5 @@ func onInterestGone(argbody: Node2D):
 	targetInterest = null
 	randTimeStart()
 	randomDirection()
+
+# If interest touches the dog, the dog instantly eats it (cut directly to chomping part of eat animation), otherwise do full eating animation
