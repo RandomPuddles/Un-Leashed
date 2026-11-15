@@ -1,10 +1,49 @@
-[gd_scene format=3 uid="uid://c11evomcvceit"]
+[gd_scene format=4 uid="uid://c11evomcvceit"]
 
 [ext_resource type="PackedScene" uid="uid://dqu1laf1mxgxr" path="res://Scenes/Stage 4 - Goon Lair.tscn" id="1_8rt2v"]
+[ext_resource type="Texture2D" uid="uid://bhcm1v7wbxedy" path="res://Assets/Lava.png" id="2_6fgbm"]
 [ext_resource type="PackedScene" uid="uid://vwnd01wmfw3d" path="res://Scenes/Interests/bigrock.tscn" id="2_savrg"]
 [ext_resource type="PackedScene" uid="uid://dvdg6i07eaeey" path="res://Scenes/Interests/lamppost.tscn" id="3_6fgbm"]
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6w465"]
+texture = ExtResource("2_6fgbm")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_qccgy"]
+tile_size = Vector2i(64, 64)
+sources/1 = SubResource("TileSetAtlasSource_6w465")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qccgy"]
+size = Vector2(514, 513)
+
 [node name="Node2D" unique_id=884539179 instance=ExtResource("1_8rt2v")]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="TileMapLayer/TileMapLayer" parent_id_path=PackedInt32Array(1445191904) index="0" unique_id=242989397]
+tile_map_data = PackedByteArray("AAD8//z/AQAAAAAAAAD8//3/AQAAAAEAAAD8//7/AQAAAAIAAAD8////AQAAAAMAAAD9//z/AQABAAAAAAD9//3/AQABAAEAAAD9//7/AQABAAIAAAD9////AQABAAMAAAD+//z/AQACAAAAAAD+//3/AQACAAEAAAD+//7/AQACAAIAAAD+////AQACAAMAAAD///z/AQADAAAAAAD///3/AQADAAEAAAD///7/AQADAAIAAAD/////AQADAAMAAAAAAPz/AQAAAAAAAAAAAP3/AQAAAAEAAAAAAP7/AQAAAAIAAAAAAP//AQAAAAMAAAABAPz/AQABAAAAAAABAP3/AQABAAEAAAABAP7/AQABAAIAAAABAP//AQABAAMAAAACAPz/AQACAAAAAAACAP3/AQACAAEAAAACAP7/AQACAAIAAAACAP//AQACAAMAAAADAPz/AQADAAAAAAADAP3/AQADAAEAAAADAP7/AQADAAIAAAADAP//AQADAAMAAAAAAAAAAQAAAAAAAAAAAAEAAQAAAAEAAAAAAAIAAQAAAAIAAAAAAAMAAQAAAAMAAAABAAAAAQABAAAAAAABAAEAAQABAAEAAAABAAIAAQABAAIAAAABAAMAAQABAAMAAAACAAAAAQACAAAAAAACAAEAAQACAAEAAAACAAIAAQACAAIAAAACAAMAAQACAAMAAAADAAAAAQADAAAAAAADAAEAAQADAAEAAAADAAIAAQADAAIAAAADAAMAAQADAAMAAAD8/wAAAQAAAAAAAAD8/wEAAQAAAAEAAAD8/wIAAQAAAAIAAAD8/wMAAQAAAAMAAAD9/wAAAQABAAAAAAD9/wEAAQABAAEAAAD9/wIAAQABAAIAAAD9/wMAAQABAAMAAAD+/wAAAQACAAAAAAD+/wEAAQACAAEAAAD+/wIAAQACAAIAAAD+/wMAAQACAAMAAAD//wAAAQADAAAAAAD//wEAAQADAAEAAAD//wIAAQADAAIAAAD//wMAAQADAAMAAAA=")
+tile_set = SubResource("TileSet_qccgy")
+
+[node name="StaticBody2D" parent="." index="1" unique_id=760874759]
+collision_mask = 3
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" index="4" unique_id=982364896]
+position = Vector2(-1, -0.5)
+shape = SubResource("RectangleShape2D_qccgy")
 
 [node name="Node2D" parent="." index="2" unique_id=416441256 instance=ExtResource("2_savrg")]
 position = Vector2(1646, -156)
