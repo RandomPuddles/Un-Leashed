@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://bup5p46isbx2u"]
+
+[ext_resource type="Texture2D" uid="uid://ci5vgte8ycqmy" path="res://Assets/car side animation/car_0000.png" id="1_3fewv"]
+[ext_resource type="Texture2D" uid="uid://bpu373sjhjm7t" path="res://Assets/car side animation/car_0001.png" id="2_st7jd"]
+[ext_resource type="Texture2D" uid="uid://dq2gnioiy770p" path="res://Assets/car side animation/car_0002.png" id="3_jdoi7"]
+[ext_resource type="Texture2D" uid="uid://c6ikg70n2xyva" path="res://Assets/car side animation/car_0003.png" id="4_fiyfr"]
+[ext_resource type="Texture2D" uid="uid://jw46h6wdtygw" path="res://Assets/car side animation/car_0004.png" id="5_igw62"]
+[ext_resource type="Texture2D" uid="uid://cj14yses3spa8" path="res://Assets/car side animation/car_0005.png" id="6_tueg3"]
+[ext_resource type="Texture2D" uid="uid://jdajjilx27jq" path="res://Assets/car side animation/car_0006.png" id="7_ur40m"]
+[ext_resource type="Texture2D" uid="uid://t3k0luuwem18" path="res://Assets/car side animation/car_0007.png" id="8_c6ysj"]
+[ext_resource type="Texture2D" uid="uid://c6xx6gdoby45k" path="res://Assets/car side animation/car_0008.png" id="9_3llbc"]
+[ext_resource type="Texture2D" uid="uid://b0mrxkyyegrtr" path="res://Assets/car side animation/car_0009.png" id="10_p4ydt"]
+[ext_resource type="Texture2D" uid="uid://drbgdga6ttf6m" path="res://Assets/car side animation/car_0010.png" id="11_3idbt"]
+[ext_resource type="Texture2D" uid="uid://csodr3p5ovgp8" path="res://Assets/car side animation/car_0011.png" id="12_kuntr"]
+[ext_resource type="Texture2D" uid="uid://dbk41afdwrwm7" path="res://Assets/car side animation/car_0012.png" id="13_4et86"]
+[ext_resource type="Texture2D" uid="uid://bu67hwrtjg6h2" path="res://Assets/car side animation/car_0013.png" id="14_xmtkg"]
+[ext_resource type="Texture2D" uid="uid://di0h14btq5ura" path="res://Assets/car side animation/car_0014.png" id="15_4mvj3"]
+[ext_resource type="Texture2D" uid="uid://dr7w0dumwwbi7" path="res://Assets/car side animation/car_0015.png" id="16_ih3ct"]
+[ext_resource type="Texture2D" uid="uid://ch6c82k4ok3p0" path="res://Assets/car side animation/car_0016.png" id="17_qiyel"]
+[ext_resource type="Texture2D" uid="uid://7r6becvoqsag" path="res://Assets/car side animation/car_0017.png" id="18_8af4p"]
+[ext_resource type="Texture2D" uid="uid://0ptvrl8aer6e" path="res://Assets/car side animation/car_0018.png" id="19_0h4cf"]
+[ext_resource type="Texture2D" uid="uid://bt640ekw6kviv" path="res://Assets/car side animation/car_0019.png" id="20_xht1e"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qccgy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3fewv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_st7jd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jdoi7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fiyfr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_igw62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tueg3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ur40m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_c6ysj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3llbc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_p4ydt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_3idbt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_kuntr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4et86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_xmtkg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4mvj3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ih3ct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_qiyel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_8af4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_0h4cf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_xht1e")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 40.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qccgy"]
+size = Vector2(216, 163)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_llthp"]
+size = Vector2(220.5, 182.5)
+
+[node name="Node2D" type="CharacterBody2D" unique_id=1634031237]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=938903215]
+position = Vector2(0, -18.000046)
+scale = Vector2(0.38, 0.351)
+sprite_frames = SubResource("SpriteFrames_qccgy")
+frame_progress = 0.6354305
+
+[node name="Area2D" type="Area2D" parent="." unique_id=710314741]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=813422368]
+position = Vector2(-3, -2.5)
+shape = SubResource("RectangleShape2D_qccgy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=979413546]
+position = Vector2(-2.25, -1.75)
+shape = SubResource("RectangleShape2D_llthp")

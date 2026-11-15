@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://m58s3ip1fhww"]
+
+[ext_resource type="Texture2D" uid="uid://pj5kq77w5dd3" path="res://Assets/water bullet/moving/water bullet_0000.png" id="1_o3kas"]
+[ext_resource type="Texture2D" uid="uid://c3lxejnjn16go" path="res://Assets/water bullet/moving/water bullet_0001.png" id="2_qptr7"]
+[ext_resource type="Texture2D" uid="uid://dthsasulyxwqr" path="res://Assets/water bullet/explode/water bullet_0000.png" id="3_51oqg"]
+[ext_resource type="Texture2D" uid="uid://jta430xolte4" path="res://Assets/water bullet/explode/water bullet_0001.png" id="4_avvhs"]
+[ext_resource type="Texture2D" uid="uid://cdp84b7l3rfdq" path="res://Assets/water bullet/explode/water bullet_0002.png" id="5_8c2i3"]
+[ext_resource type="Texture2D" uid="uid://d1cmn4gkqvepc" path="res://Assets/water bullet/explode/water bullet_0003.png" id="6_hhfwk"]
+[ext_resource type="Texture2D" uid="uid://dxjsde4jm5543" path="res://Assets/water bullet/explode/water bullet_0004.png" id="7_s7qh5"]
+[ext_resource type="Texture2D" uid="uid://bs6hr6nffdfie" path="res://Assets/water bullet/explode/water bullet_0005.png" id="8_116e7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qccgy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_o3kas")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qptr7")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_51oqg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_avvhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8c2i3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hhfwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_s7qh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_116e7")
+}],
+"loop": 1,
+"name": &"explosion",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qccgy"]
+height = 22.0
+
+[node name="Node2D" type="Area2D" unique_id=57320570]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1013491673]
+position = Vector2(-1.1920929e-07, 0)
+rotation = 1.5707964
+scale = Vector2(0.046, 0.051)
+sprite_frames = SubResource("SpriteFrames_qccgy")
+frame_progress = 0.07591358
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1321206550]
+rotation = 1.5707964
+scale = Vector2(1.655, 1.655)
+shape = SubResource("CapsuleShape2D_qccgy")

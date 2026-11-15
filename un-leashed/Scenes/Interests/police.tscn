@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://yca4b748wulr"]
+
+[ext_resource type="Texture2D" uid="uid://drnjsxoi26k8g" path="res://Assets/squirrel_placeholder.png" id="1_60pee"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qccgy"]
+radius = 25.0
+height = 130.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qccgy"]
+radius = 382.04712
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_llthp"]
+radius = 28.0
+height = 136.0
+
+[node name="Node2D" type="CharacterBody2D" unique_id=1274564747]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1691481617]
+rotation = 1.5707964
+scale = Vector2(0.208, 0.12)
+texture = ExtResource("1_60pee")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1640849943]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=452938984]
+scale = Vector2(0.805, 0.805)
+shape = SubResource("CapsuleShape2D_qccgy")
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=8540340]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=61342501]
+shape = SubResource("CircleShape2D_qccgy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1610654809]
+shape = SubResource("CapsuleShape2D_llthp")

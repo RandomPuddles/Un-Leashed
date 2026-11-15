@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://ch24lisawf7s"]
+
+[ext_resource type="Texture2D" uid="uid://bqqqmkrccxe66" path="res://Assets/squirrel running/Squirrel-Run_01.png" id="1_opuox"]
+[ext_resource type="Texture2D" uid="uid://2hhy6fxfwaux" path="res://Assets/squirrel running/Squirrel-Run_02.png" id="2_dgff4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qccgy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_opuox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_dgff4")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k74ha"]
+radius = 13.1
+height = 46.77
+
+[node name="Node2D" type="CharacterBody2D" unique_id=932150013]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=403544803]
+scale = Vector2(0.071785755, 0.071785755)
+sprite_frames = SubResource("SpriteFrames_qccgy")
+frame_progress = 0.47746179
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1501666198]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1657684127]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_k74ha")

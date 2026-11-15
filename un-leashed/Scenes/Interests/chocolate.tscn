@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dvgunp63ifiso"]
+
+[ext_resource type="Texture2D" uid="uid://buj2j3434c3as" path="res://Assets/choco.png" id="1_cffp3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qccgy"]
+size = Vector2(12, 19.454544)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_llthp"]
+size = Vector2(20.948906, 34)
+
+[node name="Node2D" type="StaticBody2D" unique_id=1682893070]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1330302417]
+position = Vector2(0, -2.3841858e-07)
+scale = Vector2(0.085, 0.089)
+texture = ExtResource("1_cffp3")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2053505867]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2039920933]
+position = Vector2(1.1368684e-13, 0.3750003)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_qccgy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=151700896]
+scale = Vector2(1.37, 1.37)
+shape = SubResource("RectangleShape2D_llthp")

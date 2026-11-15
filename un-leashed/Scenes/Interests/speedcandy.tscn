@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://ql0lbyjvtm1q"]
+
+[ext_resource type="Texture2D" uid="uid://bahu03jq0d02t" path="res://Assets/candy.png" id="1_31y6i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k74ha"]
+radius = 14.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qccgy"]
+size = Vector2(62, 32)
+
+[node name="Node2D" type="StaticBody2D" unique_id=999967169]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=246959315]
+position = Vector2(-2.9802322e-08, 0)
+scale = Vector2(0.088, 0.09)
+texture = ExtResource("1_31y6i")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=513496775]
+scale = Vector2(0.875, 0.875)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1872785625]
+scale = Vector2(1.055, 1.055)
+shape = SubResource("CircleShape2D_k74ha")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=680000742]
+shape = SubResource("RectangleShape2D_qccgy")
