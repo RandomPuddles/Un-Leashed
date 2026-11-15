@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dhndfg8an170i"]
 
-[ext_resource type="Script" uid="uid://dagwegqmslsiv" path="res://Scenes/UI/slide4Next.gd" id="1_c0tjt"]
+[ext_resource type="Script" uid="uid://dagwegqmslsiv" path="res://Scripts/slide4Next.gd" id="1_c0tjt"]
 
 [node name="Node2D" type="Control" unique_id=1487539004]
 layout_mode = 3

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Un-Leashed"
-run/main_scene="uid://b8mhmgmu5dsd8"
+run/main_scene="uid://1ryryhr7q432"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 

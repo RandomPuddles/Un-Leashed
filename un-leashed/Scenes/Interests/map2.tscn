@@ -1,0 +1,190 @@
+[gd_scene format=3 uid="uid://ru7vcbx1hl2m"]
+
+[ext_resource type="PackedScene" uid="uid://bji54mevnvd8h" path="res://Scenes/Stage 2 - The City.tscn" id="1_avpb4"]
+[ext_resource type="PackedScene" uid="uid://clupon7dui6qi" path="res://Scenes/player.tscn" id="2_j765a"]
+[ext_resource type="PackedScene" uid="uid://dvdg6i07eaeey" path="res://Scenes/Interests/lamppost.tscn" id="3_aa2tu"]
+[ext_resource type="PackedScene" uid="uid://nrmj1aohdo5k" path="res://Scenes/Interests/bench.tscn" id="4_bvbda"]
+[ext_resource type="PackedScene" uid="uid://heyujw57frs2" path="res://Scenes/Interests/benchflipped.tscn" id="5_vq0ho"]
+
+[node name="Node2D" type="Node2D" unique_id=689400277]
+
+[node name="Node2D" parent="." unique_id=884539179 instance=ExtResource("1_avpb4")]
+position = Vector2(865, 733)
+scale = Vector2(2, 2)
+
+[node name="Node2D2" parent="." unique_id=447015847 instance=ExtResource("2_j765a")]
+position = Vector2(1186, 465)
+
+[node name="Camera2D" type="Camera2D" parent="Node2D2" unique_id=1317977369]
+
+[node name="Lights" type="Node2D" parent="." unique_id=249415482]
+
+[node name="Node2D5" parent="Lights" unique_id=373803593 instance=ExtResource("3_aa2tu")]
+position = Vector2(943, -1)
+
+[node name="Node2D7" parent="Lights" unique_id=541461477 instance=ExtResource("3_aa2tu")]
+position = Vector2(2205, 4)
+
+[node name="Node2D8" parent="Lights" unique_id=1397067688 instance=ExtResource("3_aa2tu")]
+position = Vector2(-406, -9)
+
+[node name="Node2D10" parent="Lights" unique_id=612642016 instance=ExtResource("3_aa2tu")]
+position = Vector2(-1932, 0)
+
+[node name="Node2D11" parent="Lights" unique_id=1321539186 instance=ExtResource("3_aa2tu")]
+position = Vector2(2928, 441)
+
+[node name="Node2D12" parent="Lights" unique_id=1780905070 instance=ExtResource("3_aa2tu")]
+position = Vector2(3738, -22)
+
+[node name="Node2D14" parent="Lights" unique_id=887525372 instance=ExtResource("3_aa2tu")]
+position = Vector2(-3440, 13)
+
+[node name="Node2D17" parent="Lights" unique_id=1542461866 instance=ExtResource("3_aa2tu")]
+position = Vector2(-2724, 467)
+
+[node name="Node2D20" parent="Lights" unique_id=1599130439 instance=ExtResource("3_aa2tu")]
+position = Vector2(-1163, 448)
+
+[node name="Node2D22" parent="Lights" unique_id=1763779519 instance=ExtResource("3_aa2tu")]
+position = Vector2(334, 468)
+
+[node name="Node2D23" parent="Lights" unique_id=1798115533 instance=ExtResource("3_aa2tu")]
+position = Vector2(1560, 446)
+
+[node name="Node2D29" parent="Lights" unique_id=746663713 instance=ExtResource("3_aa2tu")]
+position = Vector2(5219, -1)
+
+[node name="Node2D28" parent="Lights" unique_id=1160908359 instance=ExtResource("3_aa2tu")]
+position = Vector2(4453, 433)
+
+[node name="Benches" type="Node2D" parent="." unique_id=882805950]
+
+[node name="Node2D3" parent="Benches" unique_id=1076691070 instance=ExtResource("4_bvbda")]
+position = Vector2(-724, 344)
+
+[node name="Node2D4" parent="Benches" unique_id=1159670275 instance=ExtResource("4_bvbda")]
+position = Vector2(-726, 511)
+
+[node name="Node2D5" parent="Benches" unique_id=1967433409 instance=ExtResource("4_bvbda")]
+position = Vector2(-722, 1535)
+
+[node name="Node2D6" parent="Benches" unique_id=1993708560 instance=ExtResource("4_bvbda")]
+position = Vector2(-726, 1369)
+
+[node name="Node2D7" parent="Benches" unique_id=1332274262 instance=ExtResource("4_bvbda")]
+position = Vector2(-723, 1677)
+
+[node name="Node2D8" parent="Benches" unique_id=1926246602 instance=ExtResource("4_bvbda")]
+position = Vector2(-730, 689)
+
+[node name="Node2D9" parent="Benches" unique_id=1472535722 instance=ExtResource("4_bvbda")]
+position = Vector2(1843, 338)
+
+[node name="Node2D10" parent="Benches" unique_id=1810966451 instance=ExtResource("4_bvbda")]
+position = Vector2(1835, 493)
+
+[node name="Node2D11" parent="Benches" unique_id=258061251 instance=ExtResource("4_bvbda")]
+position = Vector2(1826, 662)
+
+[node name="Node2D12" parent="Benches" unique_id=969775493 instance=ExtResource("5_vq0ho")]
+position = Vector2(-1627, 363)
+
+[node name="Node2D13" parent="Benches" unique_id=953199720 instance=ExtResource("5_vq0ho")]
+position = Vector2(-1639, 515)
+
+[node name="Node2D14" parent="Benches" unique_id=313963665 instance=ExtResource("5_vq0ho")]
+position = Vector2(-1636, 686)
+
+[node name="Node2D15" parent="Benches" unique_id=10245048 instance=ExtResource("5_vq0ho")]
+position = Vector2(-104, 318)
+
+[node name="Node2D16" parent="Benches" unique_id=1617346712 instance=ExtResource("5_vq0ho")]
+position = Vector2(-100, 490)
+
+[node name="Node2D17" parent="Benches" unique_id=1295394372 instance=ExtResource("5_vq0ho")]
+position = Vector2(-98, 679)
+
+[node name="Node2D18" parent="Benches" unique_id=1275857259 instance=ExtResource("5_vq0ho")]
+position = Vector2(-3163, 344)
+
+[node name="Node2D19" parent="Benches" unique_id=1191674905 instance=ExtResource("5_vq0ho")]
+position = Vector2(-3161, 496)
+
+[node name="Node2D20" parent="Benches" unique_id=903516355 instance=ExtResource("5_vq0ho")]
+position = Vector2(-3163, 660)
+
+[node name="Node2D21" parent="Benches" unique_id=434522706 instance=ExtResource("4_bvbda")]
+position = Vector2(-2274, 342)
+
+[node name="Node2D22" parent="Benches" unique_id=1758830157 instance=ExtResource("4_bvbda")]
+position = Vector2(-2279, 494)
+
+[node name="Node2D23" parent="Benches" unique_id=169130623 instance=ExtResource("4_bvbda")]
+position = Vector2(-2272, 667)
+
+[node name="Node2D24" parent="Benches" unique_id=472210136 instance=ExtResource("5_vq0ho")]
+position = Vector2(2462, 339)
+
+[node name="Node2D25" parent="Benches" unique_id=1605267607 instance=ExtResource("5_vq0ho")]
+position = Vector2(2461, 516)
+
+[node name="Node2D26" parent="Benches" unique_id=1559340900 instance=ExtResource("5_vq0ho")]
+position = Vector2(2459, 678)
+
+[node name="Node2D27" parent="Benches" unique_id=1104362831 instance=ExtResource("4_bvbda")]
+position = Vector2(3370, 360)
+
+[node name="Node2D28" parent="Benches" unique_id=1060258627 instance=ExtResource("4_bvbda")]
+position = Vector2(3364, 526)
+
+[node name="Node2D29" parent="Benches" unique_id=1269474248 instance=ExtResource("4_bvbda")]
+position = Vector2(3366, 678)
+
+[node name="Node2D30" parent="Benches" unique_id=2104188471 instance=ExtResource("5_vq0ho")]
+position = Vector2(3994, 353)
+
+[node name="Node2D31" parent="Benches" unique_id=1752161243 instance=ExtResource("5_vq0ho")]
+position = Vector2(4002, 524)
+
+[node name="Node2D32" parent="Benches" unique_id=1143061459 instance=ExtResource("5_vq0ho")]
+position = Vector2(3996, 676)
+
+[node name="Node2D33" parent="Benches" unique_id=1078262543 instance=ExtResource("4_bvbda")]
+position = Vector2(4905, 351)
+
+[node name="Node2D34" parent="Benches" unique_id=717965624 instance=ExtResource("4_bvbda")]
+position = Vector2(4901, 516)
+
+[node name="Node2D35" parent="Benches" unique_id=2144771064 instance=ExtResource("4_bvbda")]
+position = Vector2(4903, 676)
+
+[node name="Node2D36" parent="Benches" unique_id=1534969232 instance=ExtResource("5_vq0ho")]
+position = Vector2(-1120, 1374)
+
+[node name="Node2D37" parent="Benches" unique_id=159598869 instance=ExtResource("5_vq0ho")]
+position = Vector2(-1119, 1532)
+
+[node name="Node2D38" parent="Benches" unique_id=1933764876 instance=ExtResource("5_vq0ho")]
+position = Vector2(-1113, 1681)
+
+[node name="Node2D39" parent="Benches" unique_id=662713205 instance=ExtResource("3_aa2tu")]
+position = Vector2(-433, 1034)
+
+[node name="Node2D40" parent="Benches" unique_id=937507670 instance=ExtResource("3_aa2tu")]
+position = Vector2(-1983, 1026)
+
+[node name="Node2D41" parent="Benches" unique_id=1505242909 instance=ExtResource("3_aa2tu")]
+position = Vector2(908, 1019)
+
+[node name="Node2D42" parent="Benches" unique_id=1104291273 instance=ExtResource("3_aa2tu")]
+position = Vector2(2164, 1019)
+
+[node name="Node2D43" parent="Benches" unique_id=249919897 instance=ExtResource("3_aa2tu")]
+position = Vector2(3699, 1020)
+
+[node name="Node2D44" parent="Benches" unique_id=1385016925 instance=ExtResource("3_aa2tu")]
+position = Vector2(5222, 1019)
+
+[node name="Node2D45" parent="Benches" unique_id=1716287224 instance=ExtResource("3_aa2tu")]
+position = Vector2(-3470, 1029)
