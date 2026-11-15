@@ -2,14 +2,15 @@ class_name Player
 extends RigidBody2D
 
 @onready var leash_anchor: Marker2D = $LeashAnchor
+@onready var dash_timer: Timer = $DashTimer
 
 @export var acceleration: float = 2000.0
 @export var maxSpeed: float = 2000.0
+@export var dashForce: float = 50
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
@@ -18,4 +19,8 @@ func _physics_process(delta: float) -> void:
 		var targetVelocity = input_direction * maxSpeed
 		var velocityDifference = targetVelocity - linear_velocity
 		var moveForce = velocityDifference / delta
-		apply_central_force(moveForce.limit_length(acceleration * mass))
+		if Input.is_action_just_pressed("dash") and dash_timer.is_stopped():
+			apply_central_force(moveForce.limit_length(acceleration * mass) * dashForce)
+			dash_timer.start(3)
+		else:
+			apply_central_force(moveForce.limit_length(acceleration * mass))
