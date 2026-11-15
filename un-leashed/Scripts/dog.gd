@@ -33,17 +33,22 @@ func _ready() -> void:
 
 # Called when interest enters dog's bite range
 func onBiteStart(body: Node2D):
-	if body.is_in_group("Interest"):
-		biteTarget = body
-		biteTimer.start(1)
+	if not body.is_in_group("Interest"):
+		return
+	
+	if not is_instance_valid(body):
+		return
+	
+	biteTarget = body
+	biteTimer.start(biteStartup)
 
 # Called when it's time for dog to eat interest
 func onBiteTime():
-	biteTarget.queue_free()
+	if is_instance_valid(biteTarget):
+		biteTarget.queue_free()
+	
 	biteTarget = null
-	targetInterest = null
-	interested = false
-	fear = false
+	findNewInterest()
 
 func onPossibleBiteTargetExit(body: Node2D):
 	if body == biteTarget:
@@ -54,15 +59,19 @@ func onPossibleBiteTargetExit(body: Node2D):
 		biteTimer.stop() # Stops timer before interest is eaten
 
 func _physics_process(_delta: float) -> void:
-	# Run at target if interested
-	if interested and fear:
-		direction = -(targetInterest.global_position - global_position).normalized() # get direction towards target
-		apply_central_force(direction * runForce)
-	elif interested and linear_velocity.length() < maxSpeed:
-		direction = (targetInterest.global_position - global_position).normalized() # get direction towards target
-		apply_central_force(direction * runForce)
+	if interested and not is_instance_valid(targetInterest):
+		findNewInterest()
+		return
+		# Run at target if interested
+	if interested:
+		if fear:
+			direction = -(targetInterest.global_position - global_position).normalized() # get direction towards target
+			apply_central_force(direction * runForce)
+		elif linear_velocity.length() < maxSpeed:
+			direction = (targetInterest.global_position - global_position).normalized() # get direction towards target
+			apply_central_force(direction * runForce)
 	# Continuously apply force in the dog's current direction
-	if !interested and linear_velocity.length() < maxSpeed:
+	elif linear_velocity.length() < maxSpeed:
 		apply_central_force(direction * walkForce)
 
 # Choose a random direction for the dog to wander
@@ -97,17 +106,24 @@ func onInterest(body: Node2D):
 # Called when interest leaves range. Checks for new interest to run at
 func onInterestGone(argbody: Node2D):
 	# Ignore if the body that left range isn't the target body
-	if argbody != targetInterest:
+	if argbody != null and argbody != targetInterest:
 		return
-	# Look for new interest in range
-	for nodebody in detection_area.get_overlapping_bodies():
-		if nodebody is Node2D and (nodebody.is_in_group("Interest") or nodebody.is_in_group("Uninterest")):
-			onInterest(nodebody) # dog retargets 
-			return
-	# Resume meandering if no interests remain
+	findNewInterest()
+
+func findNewInterest():
 	interested = false
 	fear = false
 	targetInterest = null
+	
+	# Look for new interest in range
+	for nodebody in detection_area.get_overlapping_bodies():
+		if not is_instance_valid(nodebody) or nodebody.is_queued_for_deletion():
+			continue
+		if nodebody.is_in_group("Interest") or nodebody.is_in_group("Uninterest"):
+			onInterest(nodebody) # dog retargets 
+			return
+	
+	# Resume meandering if no interests remain
 	randTimeStart()
 	randomDirection()
 

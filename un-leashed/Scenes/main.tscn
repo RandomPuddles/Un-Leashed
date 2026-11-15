@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://cc8vmip1lqpv8" path="res://Scenes/leash.tscn" id="4_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://b056lyj2kjo7s" path="res://Scenes/levelTimer.tscn" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://dj2j6hjvecc1o" path="res://Scenes/Interests/victim.tscn" id="6_21xkr"]
+[ext_resource type="PackedScene" uid="uid://ck3ynxt5eu60y" path="res://Scenes/Interests/goon.tscn" id="7_344ge"]
+[ext_resource type="PackedScene" uid="uid://did5jduk4dkcq" path="res://Scenes/Interests/petter.tscn" id="8_ynf5e"]
 
 [node name="Node2D2" type="Node2D" unique_id=91032526]
 
@@ -33,3 +35,9 @@ dog = NodePath("../Dog")
 
 [node name="Node2D2" parent="." unique_id=1994745873 instance=ExtResource("6_21xkr")]
 position = Vector2(227, 333)
+
+[node name="Node2D" parent="." unique_id=2132922377 instance=ExtResource("7_344ge")]
+position = Vector2(287, -90)
+
+[node name="Node2D3" parent="." unique_id=1814147571 instance=ExtResource("8_ynf5e")]
+position = Vector2(-103, 744)

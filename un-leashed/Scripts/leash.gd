@@ -34,7 +34,6 @@ func _physics_process(_delta: float) -> void:
 	if currentLength > maxLength:
 		# Lower durability. lowers faster when stretched further
 		durability = durability - ((currentLength - maxLength) * 0.01)
-		print(durability)
 		# Pull force is larger when leash is pulled further
 		var pullForce: float = (currentLength - maxLength) * stiffness
 		var direction = currentLengthVector.normalized()
