@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b8mhmgmu5dsd8"]
+
+[ext_resource type="Script" uid="uid://bahcyb7sf8ty6" path="res://Scripts/stage1Button.gd" id="1_28flt"]
+
+[node name="Node2D" type="Node2D" unique_id=1013120438]
+
+[node name="Label" type="Label" parent="." unique_id=1497254895]
+offset_left = 540.0
+offset_top = 48.0
+offset_right = 628.0
+offset_bottom = 71.0
+text = "Main Menu"
+
+[node name="Button" type="Button" parent="." unique_id=1936894807]
+offset_left = 553.0
+offset_top = 199.0
+offset_right = 617.0
+offset_bottom = 230.0
+text = "Stage 1"
+script = ExtResource("1_28flt")
