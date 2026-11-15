@@ -1,5 +1,7 @@
 extends Node2D
 
+signal unleashed
+
 @export var player: Player
 @export var dog: Dog
 @onready var line: Line2D = $Line2D
@@ -52,6 +54,7 @@ func _physics_process(_delta: float) -> void:
 	# Break leash if durability is <= 0
 	if durability <= 0:
 		line.queue_free()
+		unleashed.emit()
 
 func updateLeashColor():
 	var damagePercent = 1.0 - (durability / maxDurability)
