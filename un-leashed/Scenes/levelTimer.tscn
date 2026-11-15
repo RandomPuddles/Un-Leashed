@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b056lyj2kjo7s"]
+
+[ext_resource type="Script" uid="uid://b805acwga8njg" path="res://Scripts/levelTime.gd" id="1_yaww0"]
+[ext_resource type="Script" uid="uid://crefxn8vomlrm" path="res://Scripts/levelTimeDisplay.gd" id="2_gs2mq"]
+
+[node name="Node2D" type="Timer" unique_id=2077822776]
+script = ExtResource("1_yaww0")
+
+[node name="Label" type="Label" parent="." unique_id=184779374]
+offset_left = 1107.0
+offset_top = 6.0
+offset_right = 1147.0
+offset_bottom = 29.0
+script = ExtResource("2_gs2mq")
