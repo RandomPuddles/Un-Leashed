@@ -14,6 +14,7 @@ extends RigidBody2D
 
 var mouseDragStartPos
 @export var maxYank: float = 10000
+@onready var sprite: Sprite2D = $Sprite2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -24,6 +25,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	var input_direction: Vector2 = Input.get_vector("left", "right", "up", "down")
 	if input_direction != Vector2.ZERO: # True if direction is pressed
+		sprite.rotation_degrees = rad_to_deg(input_direction.angle()) - 90
 		var targetVelocity = input_direction * maxSpeed
 		var velocityDifference = targetVelocity - linear_velocity
 		var moveForce = velocityDifference / delta

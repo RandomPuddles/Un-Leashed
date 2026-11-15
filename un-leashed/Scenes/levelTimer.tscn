@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://b056lyj2kjo7s"]
 
-[ext_resource type="Script" uid="uid://b805acwga8njg" path="res://Scripts/levelTime.gd" id="1_yaww0"]
 [ext_resource type="Script" uid="uid://crefxn8vomlrm" path="res://Scripts/levelTimeDisplay.gd" id="2_gs2mq"]
 
-[node name="Node2D" type="Timer" unique_id=2077822776]
-script = ExtResource("1_yaww0")
+[node name="Node2D" type="Node2D" unique_id=286127548]
 
 [node name="Label" type="Label" parent="." unique_id=184779374]
-offset_left = 1107.0
-offset_top = 6.0
-offset_right = 1147.0
-offset_bottom = 29.0
+offset_left = 0.9998779
+offset_top = 1.0000305
+offset_right = 40.999878
+offset_bottom = 24.00003
+scale = Vector2(0.9767381, 0.9767381)
 script = ExtResource("2_gs2mq")
+
+[node name="Timer" type="Timer" parent="." unique_id=2061855197]

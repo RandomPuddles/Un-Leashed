@@ -14,6 +14,9 @@ dog = NodePath("../Dog")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=709736593]
 
+[node name="LevelTimer" parent="Player" unique_id=2077822776 instance=ExtResource("5_kry3j")]
+position = Vector2(538, -320)
+
 [node name="Dog" parent="." unique_id=1030532302 instance=ExtResource("2_bo1nx")]
 position = Vector2(669, 366)
 scale = Vector2(1, 1.0184364)
@@ -24,7 +27,5 @@ position = Vector2(918, 367)
 [node name="Leash" parent="." unique_id=545569987 node_paths=PackedStringArray("player", "dog") instance=ExtResource("4_jjvhh")]
 player = NodePath("../Player")
 dog = NodePath("../Dog")
-
-[node name="LevelTimer" parent="." unique_id=2077822776 instance=ExtResource("5_kry3j")]
 
 [node name="YankTimer" type="Timer" parent="." unique_id=1625220426]
