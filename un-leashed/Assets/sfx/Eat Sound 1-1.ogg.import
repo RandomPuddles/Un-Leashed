@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cdff7ombyybd4"
+path="res://.godot/imported/Eat Sound 1-1.ogg-c2b0a6bc730df1fd036843bf65b76ffd.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/sfx/Eat Sound 1-1.ogg"
+dest_files=["res://.godot/imported/Eat Sound 1-1.ogg-c2b0a6bc730df1fd036843bf65b76ffd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

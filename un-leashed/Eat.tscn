@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://d12kmiagy51xt"]
+
+[ext_resource type="AudioStream" uid="uid://cdff7ombyybd4" path="res://Assets/sfx/Eat Sound 1-1.ogg" id="1_16m5o"]
+
+[node name="Node2D" type="AudioStreamPlayer2D" unique_id=1804800412]
+stream = ExtResource("1_16m5o")

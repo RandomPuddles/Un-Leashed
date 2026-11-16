@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dld5tcxnydhym"]
+
+[ext_resource type="AudioStream" uid="uid://1bfn1f1kdryj" path="res://Assets/sfx/Bark 1-1.ogg" id="1_gah5w"]
+
+[node name="Node2D" type="AudioStreamPlayer2D" unique_id=612040380]
+stream = ExtResource("1_gah5w")
