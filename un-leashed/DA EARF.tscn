@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://m8ouq6pbvycv"]
+
+[ext_resource type="Texture2D" uid="uid://b4156qr22wh5f" path="res://Assets/Earth_(blank).png" id="1_o4p3s"]
+
+[node name="Earth(blank)" type="Sprite2D" unique_id=231601994]
+position = Vector2(0, 2)
+texture = ExtResource("1_o4p3s")
