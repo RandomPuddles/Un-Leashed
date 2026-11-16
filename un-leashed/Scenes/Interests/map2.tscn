@@ -1,21 +1,39 @@
-[gd_scene format=3 uid="uid://ru7vcbx1hl2m"]
+[gd_scene format=3 uid="uid://u488t46vxbe1"]
 
-[ext_resource type="PackedScene" uid="uid://bji54mevnvd8h" path="res://Scenes/Stage 2 - The City.tscn" id="1_avpb4"]
+[ext_resource type="PackedScene" path="res://Scenes/Stage 2 - The City.tscn" id="1_avpb4"]
+[ext_resource type="PackedScene" uid="uid://cc8vmip1lqpv8" path="res://Scenes/leash.tscn" id="1_bvbda"]
+[ext_resource type="Script" uid="uid://hlyjyd5p5sch" path="res://Scripts/main.gd" id="1_vq0ho"]
 [ext_resource type="PackedScene" uid="uid://clupon7dui6qi" path="res://Scenes/player.tscn" id="2_j765a"]
-[ext_resource type="PackedScene" uid="uid://dvdg6i07eaeey" path="res://Scenes/Interests/lamppost.tscn" id="3_aa2tu"]
-[ext_resource type="PackedScene" uid="uid://nrmj1aohdo5k" path="res://Scenes/Interests/bench.tscn" id="4_bvbda"]
-[ext_resource type="PackedScene" uid="uid://heyujw57frs2" path="res://Scenes/Interests/benchflipped.tscn" id="5_vq0ho"]
+[ext_resource type="PackedScene" uid="uid://brxjbel0fpejn" path="res://Scenes/dog.tscn" id="2_vq0ho"]
+[ext_resource type="PackedScene" path="res://Scenes/Interests/lamppost.tscn" id="3_aa2tu"]
+[ext_resource type="PackedScene" path="res://Scenes/Interests/bench.tscn" id="4_bvbda"]
+[ext_resource type="PackedScene" uid="uid://b056lyj2kjo7s" path="res://Scenes/levelTimer.tscn" id="4_jbuyt"]
+[ext_resource type="PackedScene" path="res://Scenes/Interests/benchflipped.tscn" id="5_vq0ho"]
 
 [node name="Node2D" type="Node2D" unique_id=689400277]
+script = ExtResource("1_vq0ho")
+winTime = 5.0
+
+[node name="Leash" parent="." unique_id=545569987 node_paths=PackedStringArray("player", "dog") instance=ExtResource("1_bvbda")]
+z_index = 1
+player = NodePath("../Player")
+dog = NodePath("../Dog")
+
+[node name="Dog" parent="." unique_id=1030532302 instance=ExtResource("2_vq0ho")]
+z_index = 1
+position = Vector2(92, 16)
+
+[node name="Player" parent="." unique_id=447015847 node_paths=PackedStringArray("dog") instance=ExtResource("2_j765a")]
+dog = NodePath("../Dog")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1145201027]
+
+[node name="LevelTimer" parent="Player" unique_id=286127548 instance=ExtResource("4_jbuyt")]
+position = Vector2(546, -298)
 
 [node name="Node2D" parent="." unique_id=884539179 instance=ExtResource("1_avpb4")]
 position = Vector2(865, 733)
 scale = Vector2(2, 2)
-
-[node name="Node2D2" parent="." unique_id=447015847 instance=ExtResource("2_j765a")]
-position = Vector2(1186, 465)
-
-[node name="Camera2D" type="Camera2D" parent="Node2D2" unique_id=1317977369]
 
 [node name="Lights" type="Node2D" parent="." unique_id=249415482]
 
@@ -188,3 +206,5 @@ position = Vector2(5222, 1019)
 
 [node name="Node2D45" parent="Benches" unique_id=1716287224 instance=ExtResource("3_aa2tu")]
 position = Vector2(-3470, 1029)
+
+[node name="YankTimer" type="Timer" parent="." unique_id=750413296]

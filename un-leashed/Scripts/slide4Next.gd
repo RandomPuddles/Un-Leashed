@@ -10,4 +10,4 @@ func _process(_delta: float) -> void:
 	pass
 
 func onPress():
-	get_tree().change_scene_to_file("res://Scenes/main.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Interests/map1.tscn")

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c84qs6h243go6"]
+
+[ext_resource type="Script" path="res://Scripts/slide10Next.gd" id="1_no3yt"]
+
+[node name="Node2D" type="Control" unique_id=1487539004]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=899162598]
+
+[node name="Button" type="Button" parent="." unique_id=1303699046]
+layout_mode = 0
+offset_left = 1074.0
+offset_top = 602.0
+offset_right = 1138.0
+offset_bottom = 633.0
+text = "Next ->"
+script = ExtResource("1_no3yt")
+
+[node name="Label" type="Label" parent="." unique_id=1688404922]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Slide 10"

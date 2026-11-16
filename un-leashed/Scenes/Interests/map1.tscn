@@ -9,13 +9,16 @@
 [ext_resource type="PackedScene" path="res://Scenes/Interests/bigrock.tscn" id="4_ioryh"]
 [ext_resource type="PackedScene" uid="uid://cc8vmip1lqpv8" path="res://Scenes/leash.tscn" id="8_3x7ep"]
 [ext_resource type="PackedScene" uid="uid://brxjbel0fpejn" path="res://Scenes/dog.tscn" id="9_l47m6"]
+[ext_resource type="PackedScene" uid="uid://ck3ynxt5eu60y" path="res://Scenes/Interests/goon.tscn" id="10_2d22i"]
+[ext_resource type="PackedScene" uid="uid://did5jduk4dkcq" path="res://Scenes/Interests/petter.tscn" id="11_hl1l1"]
+[ext_resource type="PackedScene" uid="uid://dj2j6hjvecc1o" path="res://Scenes/Interests/victim.tscn" id="12_f6lux"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3x7ep"]
 size = Vector2(7380, 391)
 
 [node name="Node2D" unique_id=591246412 instance=ExtResource("1_k8qd8")]
 script = ExtResource("2_ioryh")
-winTime = 30.0
+winTime = 5.0
 
 [node name="1" parent="." index="1" unique_id=1296134068 instance=ExtResource("2_p5yvi")]
 position = Vector2(1994, -315)
@@ -325,3 +328,12 @@ light_mask = 3
 visibility_layer = 3
 position = Vector2(0, -73)
 shape = SubResource("RectangleShape2D_3x7ep")
+
+[node name="Node2D2" parent="." index="91" unique_id=2132922377 instance=ExtResource("10_2d22i")]
+position = Vector2(-234, -1082)
+
+[node name="Node2D3" parent="." index="92" unique_id=1814147571 instance=ExtResource("11_hl1l1")]
+position = Vector2(1460, -146)
+
+[node name="Node2D4" parent="." index="93" unique_id=1994745873 instance=ExtResource("12_f6lux")]
+position = Vector2(-1103, -115)
