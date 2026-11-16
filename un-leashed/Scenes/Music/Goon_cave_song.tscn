@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b2rlav2h3qndd"]
+
+[ext_resource type="AudioStream" uid="uid://cw42lv6cc64rq" path="res://Assets/Music/Goon Cave.ogg" id="1_qj0h2"]
+
+[node name="Node2D" type="AudioStreamPlayer2D" unique_id=506275563]
+stream = ExtResource("1_qj0h2")
+autoplay = true

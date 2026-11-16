@@ -6,6 +6,7 @@ extends RigidBody2D
 @onready var biteArea: Area2D = $BiteArea
 @onready var biteTimer: Timer = $BiteTimer
 var biteTarget: Node2D
+@onready var sprite: AnimatedSprite2D = $Sprite2D
 
 @export var biteStartup: float = 1.0
 @export var walkForce: float = 50.0
@@ -30,6 +31,7 @@ func _ready() -> void:
 	randomDirection()
 	biteTimer.autostart = false
 	biteTimer.one_shot = true
+	sprite.play("default")
 
 # Called when interest enters dog's bite range
 func onBiteStart(body: Node2D):
@@ -37,6 +39,7 @@ func onBiteStart(body: Node2D):
 		return
 	if not is_instance_valid(body):
 		return
+	sprite.play("Eat")
 	biteTarget = body
 	biteTimer.start(biteStartup)
 
@@ -45,11 +48,13 @@ func onBiteTime():
 	if is_instance_valid(biteTarget):
 		biteTarget.queue_free()
 	
+	sprite.play("default")
 	biteTarget = null
 	findNewInterest()
 
 func onPossibleBiteTargetExit(body: Node2D):
 	if body == biteTarget:
+		sprite.play("default")
 		biteTarget = null
 		targetInterest = null
 		interested = false
@@ -57,6 +62,10 @@ func onPossibleBiteTargetExit(body: Node2D):
 		biteTimer.stop() # Stops timer before interest is eaten
 
 func _physics_process(_delta: float) -> void:
+	if linear_velocity.x > 0:
+		sprite.flip_h = false
+	if linear_velocity.x < 0:
+		sprite.flip_h = true
 	if interested and not is_instance_valid(targetInterest):
 		findNewInterest()
 		return

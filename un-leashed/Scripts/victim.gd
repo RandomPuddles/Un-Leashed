@@ -1,8 +1,8 @@
 extends RigidBody2D
 
 @export var walkForce: float = 50.0
+@onready var sprite: AnimatedSprite2D = $PersonPlaceholderPlaceholderPlaceholder
 
-var interested: bool = false # true if the dog is running at a thing of interest
 var targetInterest: Node2D # thing of interest dog is running at
 
 var direction: Vector2
@@ -12,10 +12,16 @@ func _ready() -> void:
 	timer.timeout.connect(onTimeout)
 	randTimeStart()
 	randomDirection()
+	sprite.play("default")
 
 func _physics_process(_delta: float) -> void:
+	if linear_velocity.x > 0:
+		sprite.flip_h = true
+	if linear_velocity.x < 0:
+		sprite.flip_h = false
+	
 	# Continuously apply force in the victim's current direction
-		apply_central_force(direction * walkForce)
+	apply_central_force(direction * walkForce)
 
 # Choose a random direction for the dog to wander
 func randomDirection() -> void:

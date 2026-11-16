@@ -65,7 +65,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("13_en3qx")
 }],
-"loop": 1,
+"loop": true,
 "name": &"default",
 "speed": 11.0
 }, {
@@ -106,7 +106,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("25_lsaao")
 }],
-"loop": 1,
+"loop": true,
 "name": &"petter-aware",
 "speed": 11.0
 }]
@@ -130,7 +130,7 @@ script = ExtResource("1_wnsyb")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=744617462]
 scale = Vector2(0.157, 0.157)
 sprite_frames = SubResource("SpriteFrames_qccgy")
-frame_progress = 0.7515525
+frame_progress = 0.8490785
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1925843498]
 

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bahcyb7sf8ty6" path="res://Scripts/stage1Button.gd" id="1_5pknu"]
 [ext_resource type="Script" uid="uid://pcp8cb5a07sc" path="res://Scripts/itemShopButton.gd" id="2_b7htb"]
 [ext_resource type="Script" uid="uid://bajq2iawinhdx" path="res://Scripts/startButton.gd" id="3_8be4d"]
+[ext_resource type="PackedScene" uid="uid://ub4kkvoh4ojp" path="res://Scenes/Music/Menu Music.tscn" id="4_pr0b3"]
 
 [node name="Node2D2" type="Control" unique_id=1039132230]
 layout_mode = 3
@@ -46,3 +47,5 @@ offset_right = 606.0
 offset_bottom = 227.0
 text = "Start"
 script = ExtResource("3_8be4d")
+
+[node name="Node2D" parent="." unique_id=1166714253 instance=ExtResource("4_pr0b3")]

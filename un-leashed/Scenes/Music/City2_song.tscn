@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cks486co5k5pi"]
+
+[ext_resource type="AudioStream" uid="uid://buh6ouct4wdwg" path="res://Assets/Music/City2.ogg" id="1_oko72"]
+
+[node name="Node2D" type="AudioStreamPlayer2D" unique_id=1014380909]
+stream = ExtResource("1_oko72")
+autoplay = true

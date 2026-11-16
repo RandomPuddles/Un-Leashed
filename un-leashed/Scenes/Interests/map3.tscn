@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/Interests/lamppost.tscn" id="4_juwj4"]
 [ext_resource type="PackedScene" uid="uid://cc8vmip1lqpv8" path="res://Scenes/leash.tscn" id="5_fyve8"]
 [ext_resource type="PackedScene" uid="uid://brxjbel0fpejn" path="res://Scenes/dog.tscn" id="6_7knse"]
+[ext_resource type="PackedScene" uid="uid://b2rlav2h3qndd" path="res://Scenes/Music/Goon_cave_song.tscn" id="6_18l6x"]
 [ext_resource type="PackedScene" uid="uid://clupon7dui6qi" path="res://Scenes/player.tscn" id="7_18l6x"]
 [ext_resource type="PackedScene" uid="uid://b056lyj2kjo7s" path="res://Scenes/levelTimer.tscn" id="8_q75uw"]
 
@@ -39,7 +40,7 @@ size = Vector2(514, 513)
 
 [node name="Node2D" unique_id=884539179 instance=ExtResource("1_v32mp")]
 script = ExtResource("2_7knse")
-winTime = 5.0
+winTime = 120.0
 
 [node name="TileMapLayer" type="TileMapLayer" parent="TileMapLayer/TileMapLayer" parent_id_path=PackedInt32Array(1445191904) index="0" unique_id=242989397]
 tile_map_data = PackedByteArray("AAD8//z/AQAAAAAAAAD8//3/AQAAAAEAAAD8//7/AQAAAAIAAAD8////AQAAAAMAAAD9//z/AQABAAAAAAD9//3/AQABAAEAAAD9//7/AQABAAIAAAD9////AQABAAMAAAD+//z/AQACAAAAAAD+//3/AQACAAEAAAD+//7/AQACAAIAAAD+////AQACAAMAAAD///z/AQADAAAAAAD///3/AQADAAEAAAD///7/AQADAAIAAAD/////AQADAAMAAAAAAPz/AQAAAAAAAAAAAP3/AQAAAAEAAAAAAP7/AQAAAAIAAAAAAP//AQAAAAMAAAABAPz/AQABAAAAAAABAP3/AQABAAEAAAABAP7/AQABAAIAAAABAP//AQABAAMAAAACAPz/AQACAAAAAAACAP3/AQACAAEAAAACAP7/AQACAAIAAAACAP//AQACAAMAAAADAPz/AQADAAAAAAADAP3/AQADAAEAAAADAP7/AQADAAIAAAADAP//AQADAAMAAAAAAAAAAQAAAAAAAAAAAAEAAQAAAAEAAAAAAAIAAQAAAAIAAAAAAAMAAQAAAAMAAAABAAAAAQABAAAAAAABAAEAAQABAAEAAAABAAIAAQABAAIAAAABAAMAAQABAAMAAAACAAAAAQACAAAAAAACAAEAAQACAAEAAAACAAIAAQACAAIAAAACAAMAAQACAAMAAAADAAAAAQADAAAAAAADAAEAAQADAAEAAAADAAIAAQADAAIAAAADAAMAAQADAAMAAAD8/wAAAQAAAAAAAAD8/wEAAQAAAAEAAAD8/wIAAQAAAAIAAAD8/wMAAQAAAAMAAAD9/wAAAQABAAAAAAD9/wEAAQABAAEAAAD9/wIAAQABAAIAAAD9/wMAAQABAAMAAAD+/wAAAQACAAAAAAD+/wEAAQACAAEAAAD+/wIAAQACAAIAAAD+/wMAAQACAAMAAAD//wAAAQADAAAAAAD//wEAAQADAAEAAAD//wIAAQADAAIAAAD//wMAAQADAAMAAAA=")
@@ -94,17 +95,19 @@ position = Vector2(521, 1610)
 [node name="Node2D14" parent="." index="15" unique_id=334019318 instance=ExtResource("3_o206v")]
 position = Vector2(1473, 984)
 
-[node name="Leash" parent="." index="16" unique_id=545569987 node_paths=PackedStringArray("player", "dog") instance=ExtResource("5_fyve8")]
+[node name="Node2D15" parent="." index="16" unique_id=506275563 instance=ExtResource("6_18l6x")]
+
+[node name="Leash" parent="." index="17" unique_id=545569987 node_paths=PackedStringArray("player", "dog") instance=ExtResource("5_fyve8")]
 z_index = 1
 position = Vector2(-936, 361)
 player = NodePath("../Player")
 dog = NodePath("../Dog")
 
-[node name="Dog" parent="." index="17" unique_id=1030532302 instance=ExtResource("6_7knse")]
+[node name="Dog" parent="." index="18" unique_id=1030532302 instance=ExtResource("6_7knse")]
 z_index = 1
 position = Vector2(-844, 377)
 
-[node name="Player" parent="." index="18" unique_id=447015847 node_paths=PackedStringArray("dog") instance=ExtResource("7_18l6x")]
+[node name="Player" parent="." index="19" unique_id=447015847 node_paths=PackedStringArray("dog") instance=ExtResource("7_18l6x")]
 position = Vector2(-936, 361)
 dog = NodePath("../Dog")
 
@@ -113,4 +116,4 @@ dog = NodePath("../Dog")
 [node name="LevelTimer" parent="Player" index="6" unique_id=286127548 instance=ExtResource("8_q75uw")]
 position = Vector2(546, -298)
 
-[node name="YankTimer" type="Timer" parent="." index="19" unique_id=578371620]
+[node name="YankTimer" type="Timer" parent="." index="20" unique_id=578371620]

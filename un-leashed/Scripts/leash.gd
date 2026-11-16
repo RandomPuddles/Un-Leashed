@@ -5,6 +5,8 @@ signal unleashed
 @export var player: Player
 @export var dog: Dog
 @onready var line: Line2D = $Line2D
+@onready var area_2d: Area2D = $Area2D
+@onready var goon_timer: Timer = $goonTimer
 
 @export var maxLength: float = 100.0
 var currentLengthVector: Vector2
@@ -15,7 +17,19 @@ var currentLength: float
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	area_2d.body_entered.connect(goonCheck)
+	goon_timer.autostart = false
+	goon_timer.one_shot = true
+
+func goonCheck(body: Node2D):
+	if body.is_in_group("Uninterest"):
+		goon_timer.start(1)
+		goon_timer.timeout.connect(finalGoonCheck)
+
+func finalGoonCheck():
+	for body in area_2d.get_overlapping_bodies():
+		if body.is_in_group("Uninterest"):
+			breakLeash()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(_delta: float) -> void:
@@ -24,6 +38,8 @@ func _physics_process(_delta: float) -> void:
 	
 	if get_node_or_null("Line2D") == null: # End leash logic if leash is broken
 		return
+	
+	area_2d.position = dog.global_position
 	
 	# Color the leash based on current durability
 	updateLeashColor()
@@ -53,8 +69,11 @@ func _physics_process(_delta: float) -> void:
 	
 	# Break leash if durability is <= 0
 	if durability <= 0:
-		line.queue_free()
-		unleashed.emit()
+		breakLeash()
+
+func breakLeash():
+	line.queue_free()
+	unleashed.emit()
 
 func updateLeashColor():
 	var damagePercent = 1.0 - (durability / maxDurability)

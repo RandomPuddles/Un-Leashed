@@ -9,10 +9,15 @@
 [ext_resource type="PackedScene" path="res://Scenes/Interests/bench.tscn" id="4_bvbda"]
 [ext_resource type="PackedScene" uid="uid://b056lyj2kjo7s" path="res://Scenes/levelTimer.tscn" id="4_jbuyt"]
 [ext_resource type="PackedScene" path="res://Scenes/Interests/benchflipped.tscn" id="5_vq0ho"]
+[ext_resource type="PackedScene" uid="uid://cks486co5k5pi" path="res://Scenes/Music/City2_song.tscn" id="10_53yxi"]
+[ext_resource type="PackedScene" uid="uid://ylg7wormq4ym" path="res://Scenes/spawner.tscn" id="10_dkr75"]
+[ext_resource type="PackedScene" uid="uid://dj2j6hjvecc1o" path="res://Scenes/Interests/victim.tscn" id="11_53yxi"]
+[ext_resource type="PackedScene" uid="uid://did5jduk4dkcq" path="res://Scenes/Interests/petter.tscn" id="12_n2mby"]
+[ext_resource type="PackedScene" uid="uid://ck3ynxt5eu60y" path="res://Scenes/Interests/goon.tscn" id="13_decjk"]
 
 [node name="Node2D" type="Node2D" unique_id=689400277]
 script = ExtResource("1_vq0ho")
-winTime = 5.0
+winTime = 120.0
 
 [node name="Leash" parent="." unique_id=545569987 node_paths=PackedStringArray("player", "dog") instance=ExtResource("1_bvbda")]
 z_index = 1
@@ -207,4 +212,110 @@ position = Vector2(5222, 1019)
 [node name="Node2D45" parent="Benches" unique_id=1716287224 instance=ExtResource("3_aa2tu")]
 position = Vector2(-3470, 1029)
 
+[node name="Node2D4" parent="." unique_id=1014380909 instance=ExtResource("10_53yxi")]
+
 [node name="YankTimer" type="Timer" parent="." unique_id=750413296]
+
+[node name="Node2D2" parent="." unique_id=1145099415 instance=ExtResource("10_dkr75")]
+position = Vector2(-2877, -87)
+spawnScenes = Array[PackedScene]([ExtResource("11_53yxi"), ExtResource("12_n2mby"), ExtResource("13_decjk")])
+
+[node name="Node2D2" parent="Node2D2" unique_id=1416444203 instance=ExtResource("10_dkr75")]
+position = Vector2(749, -4)
+spawnScenes = Array[PackedScene]([ExtResource("11_53yxi"), ExtResource("12_n2mby"), ExtResource("13_decjk")])
+
+[node name="Node2D2" parent="Node2D2/Node2D2" unique_id=2015314483 instance=ExtResource("10_dkr75")]
+position = Vector2(671, -13)
+spawnScenes = Array[PackedScene]([ExtResource("11_53yxi"), ExtResource("12_n2mby"), ExtResource("13_decjk")])
+
+[node name="Node2D2" parent="Node2D2/Node2D2/Node2D2" unique_id=1429334800 instance=ExtResource("10_dkr75")]
+position = Vector2(671, -13)
+spawnScenes = Array[PackedScene]([ExtResource("11_53yxi"), ExtResource("12_n2mby"), ExtResource("13_decjk")])
+
+[node name="Node2D2" parent="Node2D2/Node2D2/Node2D2/Node2D2" unique_id=1387553614 instance=ExtResource("10_dkr75")]
+position = Vector2(671, -13)
+spawnScenes = Array[PackedScene]([ExtResource("11_53yxi"), ExtResource("12_n2mby"), ExtResource("13_decjk")])
+
+[node name="Node2D2" parent="Node2D2/Node2D2/Node2D2/Node2D2/Node2D2" unique_id=1024983027 instance=ExtResource("10_dkr75")]
+position = Vector2(671, -13)
+spawnScenes = Array[PackedScene]([ExtResource("11_53yxi"), ExtResource("12_n2mby"), ExtResource("13_decjk")])
+
+[node name="Node2D2" parent="Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2" unique_id=219263603 instance=ExtResource("10_dkr75")]
+position = Vector2(671, -13)
+spawnScenes = Array[PackedScene]([ExtResource("11_53yxi"), ExtResource("12_n2mby"), ExtResource("13_decjk")])
+
+[node name="Node2D2" parent="Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2" unique_id=245324256 instance=ExtResource("10_dkr75")]
+position = Vector2(671, -13)
+spawnScenes = Array[PackedScene]([ExtResource("11_53yxi"), ExtResource("12_n2mby"), ExtResource("13_decjk")])
+
+[node name="Node2D2" parent="Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2" unique_id=1999682737 instance=ExtResource("10_dkr75")]
+position = Vector2(671, -13)
+spawnScenes = Array[PackedScene]([ExtResource("11_53yxi"), ExtResource("12_n2mby"), ExtResource("13_decjk")])
+
+[node name="Node2D2" parent="Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2" unique_id=1247511139 instance=ExtResource("10_dkr75")]
+position = Vector2(671, -13)
+spawnScenes = Array[PackedScene]([ExtResource("11_53yxi"), ExtResource("12_n2mby"), ExtResource("13_decjk")])
+
+[node name="Node2D2" parent="Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2" unique_id=1788852954 instance=ExtResource("10_dkr75")]
+position = Vector2(915, 10)
+spawnScenes = Array[PackedScene]([ExtResource("11_53yxi"), ExtResource("12_n2mby"), ExtResource("13_decjk")])
+
+[node name="Node2D2" parent="Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2" unique_id=815013876 instance=ExtResource("10_dkr75")]
+position = Vector2(-1428, 626)
+spawnScenes = Array[PackedScene]([ExtResource("11_53yxi"), ExtResource("12_n2mby"), ExtResource("13_decjk")])
+
+[node name="Node2D2" parent="Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2" unique_id=721226861 instance=ExtResource("10_dkr75")]
+position = Vector2(-1851, 51)
+spawnScenes = Array[PackedScene]([ExtResource("11_53yxi"), ExtResource("12_n2mby"), ExtResource("13_decjk")])
+
+[node name="Node2D2" parent="Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2" unique_id=533187679 instance=ExtResource("10_dkr75")]
+position = Vector2(-2283, 19)
+spawnScenes = Array[PackedScene]([ExtResource("11_53yxi"), ExtResource("12_n2mby"), ExtResource("13_decjk")])
+
+[node name="Node2D2" parent="Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2" unique_id=1310693400 instance=ExtResource("10_dkr75")]
+position = Vector2(-1130, 51)
+spawnScenes = Array[PackedScene]([ExtResource("11_53yxi"), ExtResource("12_n2mby"), ExtResource("13_decjk")])
+
+[node name="Node2D3" parent="." unique_id=841119330 instance=ExtResource("10_dkr75")]
+position = Vector2(-2555, 993)
+spawnScenes = Array[PackedScene]([ExtResource("11_53yxi"), ExtResource("12_n2mby"), ExtResource("13_decjk")])
+
+[node name="Node2D2" parent="Node2D3" unique_id=1507501823 instance=ExtResource("10_dkr75")]
+position = Vector2(749, -4)
+spawnScenes = Array[PackedScene]([ExtResource("11_53yxi"), ExtResource("12_n2mby"), ExtResource("13_decjk")])
+
+[node name="Node2D2" parent="Node2D3/Node2D2" unique_id=1646344031 instance=ExtResource("10_dkr75")]
+position = Vector2(671, -13)
+spawnScenes = Array[PackedScene]([ExtResource("11_53yxi"), ExtResource("12_n2mby"), ExtResource("13_decjk")])
+
+[node name="Node2D2" parent="Node2D3/Node2D2/Node2D2" unique_id=1652517367 instance=ExtResource("10_dkr75")]
+position = Vector2(671, -13)
+spawnScenes = Array[PackedScene]([ExtResource("11_53yxi"), ExtResource("12_n2mby"), ExtResource("13_decjk")])
+
+[node name="Node2D2" parent="Node2D3/Node2D2/Node2D2/Node2D2" unique_id=1245371999 instance=ExtResource("10_dkr75")]
+position = Vector2(671, -13)
+spawnScenes = Array[PackedScene]([ExtResource("11_53yxi"), ExtResource("12_n2mby"), ExtResource("13_decjk")])
+
+[node name="Node2D2" parent="Node2D3/Node2D2/Node2D2/Node2D2/Node2D2" unique_id=187349476 instance=ExtResource("10_dkr75")]
+position = Vector2(671, -13)
+spawnScenes = Array[PackedScene]([ExtResource("11_53yxi"), ExtResource("12_n2mby"), ExtResource("13_decjk")])
+
+[node name="Node2D2" parent="Node2D3/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2" unique_id=1096333345 instance=ExtResource("10_dkr75")]
+position = Vector2(671, -13)
+spawnScenes = Array[PackedScene]([ExtResource("11_53yxi"), ExtResource("12_n2mby"), ExtResource("13_decjk")])
+
+[node name="Node2D2" parent="Node2D3/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2" unique_id=664830980 instance=ExtResource("10_dkr75")]
+position = Vector2(671, -13)
+spawnScenes = Array[PackedScene]([ExtResource("11_53yxi"), ExtResource("12_n2mby"), ExtResource("13_decjk")])
+
+[node name="Node2D2" parent="Node2D3/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2" unique_id=1480500604 instance=ExtResource("10_dkr75")]
+position = Vector2(671, -13)
+spawnScenes = Array[PackedScene]([ExtResource("11_53yxi"), ExtResource("12_n2mby"), ExtResource("13_decjk")])
+
+[node name="Node2D2" parent="Node2D3/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2" unique_id=1790419974 instance=ExtResource("10_dkr75")]
+position = Vector2(671, -13)
+spawnScenes = Array[PackedScene]([ExtResource("11_53yxi"), ExtResource("12_n2mby"), ExtResource("13_decjk")])
+
+[node name="Node2D2" parent="Node2D3/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2/Node2D2" unique_id=1858325023 instance=ExtResource("10_dkr75")]
+position = Vector2(915, 10)
+spawnScenes = Array[PackedScene]([ExtResource("11_53yxi"), ExtResource("12_n2mby"), ExtResource("13_decjk")])

@@ -1,6 +1,7 @@
 extends RigidBody2D
 
 @onready var detection_area: Area2D = $DetectionArea
+@onready var sprite: AnimatedSprite2D = $Sprite2D
 
 @export var walkForce: float = 50.0
 @export var runForce: float = 200.0
@@ -18,8 +19,14 @@ func _ready() -> void:
 	timer.timeout.connect(onTimeout)
 	randTimeStart()
 	randomDirection()
+	sprite.play("default")
 
 func _physics_process(_delta: float) -> void:
+	if linear_velocity.x > 0:
+		sprite.flip_h = true
+	if linear_velocity.x < 0:
+		sprite.flip_h = false
+	
 	if interested and not is_instance_valid(targetInterest):
 		interested = false
 		targetInterest = null
@@ -55,6 +62,7 @@ func onInterest(body: Node2D):
 		timer.stop()
 		interested = true
 		targetInterest = body
+		sprite.play("petter-aware")
 
 # Called when interest leaves range. Checks for new interest to run at
 func onInterestGone(argbody: Node2D):
@@ -68,6 +76,7 @@ func onInterestGone(argbody: Node2D):
 			return
 	# Resume meandering if no interests remain
 	interested = false
+	sprite.play("default")
 	targetInterest = null
 	randTimeStart()
 	randomDirection()

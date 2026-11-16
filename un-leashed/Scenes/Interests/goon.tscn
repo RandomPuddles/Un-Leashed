@@ -53,7 +53,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("13_7qf4s")
 }],
-"loop": 1,
+"loop": true,
 "name": &"default",
 "speed": 11.0
 }]
@@ -78,7 +78,7 @@ script = ExtResource("1_l5pio")
 [node name="PersonPlaceholderPlaceholderPlaceholder" type="AnimatedSprite2D" parent="." unique_id=485421350]
 scale = Vector2(0.157, 0.157)
 sprite_frames = SubResource("SpriteFrames_qccgy")
-frame_progress = 0.49293232
+frame_progress = 0.96511847
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1640849943]
 

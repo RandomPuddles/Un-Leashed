@@ -53,7 +53,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("13_vb6tj")
 }],
-"loop": 1,
+"loop": true,
 "name": &"default",
 "speed": 11.0
 }]
@@ -77,7 +77,7 @@ script = ExtResource("1_aciex")
 position = Vector2(4.7683716e-07, 0)
 scale = Vector2(0.15714283, 0.15714283)
 sprite_frames = SubResource("SpriteFrames_qccgy")
-frame_progress = 0.3617409
+frame_progress = 0.59435636
 
 [node name="Area2D" type="Area2D" parent="." unique_id=887786949]
 
