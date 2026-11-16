@@ -1,7 +1,62 @@
 [gd_scene format=3 uid="uid://dj2j6hjvecc1o"]
 
-[ext_resource type="Texture2D" uid="uid://cc3c6ed70ayie" path="res://Assets/person PLACEHOLDER PLACEHOLDER PLACEHOLDER.png" id="1_0nfhs"]
 [ext_resource type="Script" uid="uid://eu0osfdc0rgq" path="res://Scripts/victim.gd" id="1_aciex"]
+[ext_resource type="Texture2D" uid="uid://dl2ysm52aj0m6" path="res://Assets/normal person/walking/animatoin_0000.png" id="2_3k6nm"]
+[ext_resource type="Texture2D" uid="uid://domaajhcpw26x" path="res://Assets/normal person/walking/animatoin_0001.png" id="3_v182a"]
+[ext_resource type="Texture2D" uid="uid://bjwatutt0vcs6" path="res://Assets/normal person/walking/animatoin_0002.png" id="4_mgm5m"]
+[ext_resource type="Texture2D" uid="uid://b8vcklriepryp" path="res://Assets/normal person/walking/animatoin_0003.png" id="5_dhjoq"]
+[ext_resource type="Texture2D" uid="uid://273pt2puole0" path="res://Assets/normal person/walking/animatoin_0004.png" id="6_vyh7m"]
+[ext_resource type="Texture2D" uid="uid://dyuw87kusnpeb" path="res://Assets/normal person/walking/animatoin_0005.png" id="7_kexg6"]
+[ext_resource type="Texture2D" uid="uid://c0eh5ghiq1u20" path="res://Assets/normal person/walking/animatoin_0006.png" id="8_y6yt7"]
+[ext_resource type="Texture2D" uid="uid://bau7x0m8f1hu5" path="res://Assets/normal person/walking/animatoin_0007.png" id="9_wud4i"]
+[ext_resource type="Texture2D" uid="uid://ch5pn45484ssh" path="res://Assets/normal person/walking/animatoin_0008.png" id="10_7h6t8"]
+[ext_resource type="Texture2D" uid="uid://bhohkdw1v44e4" path="res://Assets/normal person/walking/animatoin_0009.png" id="11_0fmea"]
+[ext_resource type="Texture2D" uid="uid://bue0h8yhwfwmi" path="res://Assets/normal person/walking/animatoin_0010.png" id="12_3blym"]
+[ext_resource type="Texture2D" uid="uid://6suotq5aldqq" path="res://Assets/normal person/walking/animatoin_0011.png" id="13_vb6tj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qccgy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3k6nm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_v182a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mgm5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dhjoq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vyh7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kexg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_y6yt7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wud4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7h6t8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_0fmea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3blym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_vb6tj")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 11.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qccgy"]
 radius = 27.0
@@ -18,10 +73,11 @@ linear_damp_mode = 1
 linear_damp = 1.5
 script = ExtResource("1_aciex")
 
-[node name="PersonPlaceholderPlaceholderPlaceholder" type="Sprite2D" parent="." unique_id=1397297829]
+[node name="PersonPlaceholderPlaceholderPlaceholder" type="AnimatedSprite2D" parent="." unique_id=159996006]
 position = Vector2(4.7683716e-07, 0)
 scale = Vector2(0.15714283, 0.15714283)
-texture = ExtResource("1_0nfhs")
+sprite_frames = SubResource("SpriteFrames_qccgy")
+frame_progress = 0.3617409
 
 [node name="Area2D" type="Area2D" parent="." unique_id=887786949]
 
