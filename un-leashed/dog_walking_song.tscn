@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://brl7bckr55jhn"]
+
+[ext_resource type="AudioStream" uid="uid://d62ihn24vvb0" path="res://Assets/Music/Dog walkin.ogg" id="1_7ke8i"]
+
+[node name="Dog Walking Song" type="AudioStreamPlayer2D" unique_id=1694975404]
+stream = ExtResource("1_7ke8i")
+autoplay = true
